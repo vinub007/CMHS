@@ -1206,7 +1206,7 @@ body {
 }
 
 .hero-bg {
-  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../images/CMHS.jpg');
+  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../Images/CMHS.jpg');
   background-size: cover;
   background-position: center top;
 }
