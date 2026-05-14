@@ -1,60 +1,71 @@
-/* Font family for the body */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom styles below */
 body {
     font-family: 'Inter', sans-serif;
 }
 
-/* Custom scrollbar for a cleaner look (optional) */
 ::-webkit-scrollbar {
     width: 8px;
 }
 ::-webkit-scrollbar-track {
-    background: #f1f1f1;
+    background: #f1f5f9; /* slate-100 */
 }
 ::-webkit-scrollbar-thumb {
-    background: #4a5568; /* Darker gray */
+    background: #475569; /* slate-600 */
     border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-    background: #2d3748; /* Even darker gray */
+    background: #1e293b; /* slate-800 */
 }
 
-/* Hero background */
 .hero-bg {
-    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://placehold.co/1920x1080/667eea/ffffff?text=Welcome+to+Our+School');
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../Images/CMHS.jpg');
     background-size: cover;
-    background-position: center;
+    background-position: center top;
 }
 
-/* If using Tailwind with PostCSS, uncomment these and remove from HTML */
-/*
+.hero-text-shadow {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
 .nav-item {
-    @apply px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white transition-colors;
+    @apply px-3 py-2 rounded-md text-sm font-medium text-slate-300 hover:bg-slate-700 hover:text-white transition-colors;
 }
 .mobile-nav-item {
-    @apply block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white transition-colors;
+    @apply block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:bg-slate-700 hover:text-white transition-colors;
 }
 .section-title {
-    @apply text-3xl md:text-4xl font-bold text-center text-gray-800 mb-8;
+    @apply text-3xl md:text-4xl font-bold text-center text-slate-800 mb-12;
 }
 .card {
-    @apply bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300;
+    @apply bg-white rounded-xl shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300 ease-in-out;
 }
 .btn {
-    @apply px-6 py-3 rounded-lg font-semibold text-white transition-colors duration-300;
+    @apply px-6 py-3 rounded-lg font-semibold text-white transition-all duration-300 ease-in-out shadow-md hover:shadow-lg;
 }
 .btn-primary {
-    @apply bg-indigo-600 hover:bg-indigo-700;
+    @apply bg-sky-600 hover:bg-sky-700;
 }
 .btn-secondary {
     @apply bg-pink-500 hover:bg-pink-600;
 }
-*/
+
+.gallery-img {
+    @apply rounded-lg shadow-md hover:opacity-80 transition-opacity duration-300 w-full h-full object-cover;
+}
+
+.form-input {
+    @apply mt-1 block w-full px-3 py-2 bg-slate-700 border border-slate-600 rounded-md shadow-sm focus:outline-none focus:ring-sky-500 focus:border-sky-500 sm:text-sm text-white;
+}
 
 /* Animation for elements appearing on scroll */
 .animate-on-scroll {
     opacity: 0;
     transform: translateY(20px);
-    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 .animate-on-scroll.is-visible {
     opacity: 1;
