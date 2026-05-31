@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+Disallow: /index_old.html
+Disallow: /index_old1.html
+Disallow: /.DS_Store
+Disallow: /Images/.DS_Store
+
+Sitemap: https://columbusmodelhighschool.com/sitemap.xml

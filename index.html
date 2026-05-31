@@ -3,11 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Columbus Model High School | Miyapur, Hyderabad</title>
-<meta name="description" content="Columbus Model High School, Miyapur — SSC curriculum school in Hyderabad. 29+ years of excellence. Admissions open 2026–27. Call +91 90002 32197.">
-<meta property="og:title" content="Columbus Model High School | Miyapur, Hyderabad">
-<meta property="og:description" content="Admissions open 2026–27. Quality SSC education with STEM, sports, arts in Miyapur, Hyderabad.">
+<title>Columbus Model High School, Miyapur | Admissions 2026-27</title>
+<meta name="description" content="Columbus Model High School in Miyapur, Hyderabad offers SSC education from pre-primary to Class 10. Admissions open for 2026-27.">
+<meta property="og:title" content="Columbus Model High School, Miyapur | Admissions 2026-27">
+<meta property="og:description" content="SSC school in Miyapur, Hyderabad with admissions open for 2026-27, campus tours, academics, activities, and board results.">
 <meta property="og:image" content="https://columbusmodelhighschool.com/Images/Campus.avif">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_IN">
+<meta name="twitter:card" content="summary_large_image">
 <meta property="og:url" content="https://columbusmodelhighschool.com">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://columbusmodelhighschool.com/">
@@ -16,6 +19,11 @@
   "@context": "https://schema.org",
   "@type": "School",
   "name": "Columbus Model High School",
+  "alternateName": "CMHS Miyapur",
+  "url": "https://columbusmodelhighschool.com/",
+  "logo": "https://columbusmodelhighschool.com/Images/logo.jpg",
+  "image": "https://columbusmodelhighschool.com/Images/Campus.avif",
+  "description": "Columbus Model High School is an SSC school in Miyapur, Hyderabad offering education from pre-primary to Class 10.",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "Plot No: 5, Mayuri Nagar, Miyapur",
@@ -24,10 +32,28 @@
     "postalCode": "500049",
     "addressCountry": "IN"
   },
-  "telephone": "+919000232197",
-  "url": "https://columbusmodelhighschool.com",
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 17.51489049912043,
+    "longitude": 78.35924187468571
+  },
+  "telephone": [
+    "+919000232197",
+    "+919030474447",
+    "+914045200470"
+  ],
+  "email": "enquiry@columbusmodelhighschool.com",
   "openingHours": "Mo-Sa 08:00-16:30",
-  "image": "https://columbusmodelhighschool.com/Images/Campus.avif"
+  "areaServed": [
+    "Miyapur",
+    "Hyderabad",
+    "Serilingampally"
+  ],
+  "sameAs": [
+    "https://www.instagram.com/columbusmodelhighschool",
+    "https://www.youtube.com/@CMHS_Miyapur"
+  ],
+  "award": "100% SSC Pass Result 2026"
 }
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -303,21 +329,127 @@ section { padding: 90px 8vw; }
 .testi-name { font-size: 14px; font-weight: 500; color: var(--white); }
 .testi-role { font-size: 12px; color: rgba(255,255,255,0.45); margin-top: 2px; }
 
-/* SOCIAL */
+/* SOCIAL / LIVE FEEDS */
 .social { background: var(--cream); }
-.social-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 48px; }
-.social-card {
-  background: var(--white); border-radius: var(--radius-lg);
-  border: 1px solid rgba(0,0,0,0.08); padding: 36px;
-  display: flex; flex-direction: column; gap: 16px;
-  text-decoration: none; color: inherit; transition: all 0.25s;
+.feeds-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 56px; }
+
+.feed-panel { display: flex; flex-direction: column; }
+.feed-header {
+  display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px;
 }
-.social-card:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(13,27,42,0.1); }
-.social-icon { font-size: 28px; }
-.social-platform { font-size: 11px; font-weight: 500; letter-spacing: 0.1em; color: var(--gold); text-transform: uppercase; }
-.social-handle { font-family: 'Playfair Display', serif; font-size: 22px; }
-.social-desc { font-size: 14px; color: var(--text-muted); line-height: 1.6; }
-.social-cta { font-size: 13px; font-weight: 500; color: var(--navy); display: flex; align-items: center; gap: 6px; margin-top: auto; }
+.feed-header-left { display: flex; align-items: center; gap: 12px; }
+.feed-platform-icon {
+  width: 42px; height: 42px; border-radius: 10px;
+  display: flex; align-items: center; justify-content: center; font-size: 20px; flex-shrink: 0;
+}
+.feed-platform-icon.ig { background: linear-gradient(135deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888); }
+.feed-platform-icon.yt { background: #ff0000; color: white; font-size: 18px; }
+.feed-platform-name { font-family: 'Playfair Display', serif; font-size: 20px; }
+.feed-platform-handle { font-size: 12px; color: var(--text-muted); margin-top: 2px; }
+.feed-view-all {
+  font-size: 12px; font-weight: 500; color: var(--navy); text-decoration: none;
+  border: 1px solid rgba(0,0,0,0.15); border-radius: 8px; padding: 7px 14px;
+  transition: all 0.2s; white-space: nowrap;
+}
+.feed-view-all:hover { background: var(--navy); color: var(--white); border-color: var(--navy); }
+
+/* Instagram grid */
+.ig-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 4px;
+  border-radius: var(--radius); overflow: hidden; border: 1px solid rgba(0,0,0,0.06);
+}
+.ig-thumb { aspect-ratio: 1; overflow: hidden; position: relative; background: var(--cream-dark); }
+.ig-thumb img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s; display: block; }
+.ig-thumb:hover img { transform: scale(1.06); }
+.ig-thumb-overlay {
+  position: absolute; inset: 0; background: rgba(13,27,42,0.5);
+  display: flex; align-items: center; justify-content: center; gap: 10px;
+  opacity: 0; transition: opacity 0.25s; color: var(--white); font-size: 12px; font-weight: 500;
+}
+.ig-thumb:hover .ig-thumb-overlay { opacity: 1; }
+.ig-live-widget {
+  min-height: 330px; background: var(--white);
+  border: 1px solid rgba(0,0,0,0.06); border-radius: var(--radius-lg);
+  overflow: hidden; padding: 10px;
+}
+.ig-live-widget .feed-error { min-height: 280px; display: flex; align-items: center; justify-content: center; flex-direction: column; }
+.ig-profile-card {
+  background: var(--white); border: 1px solid rgba(0,0,0,0.06);
+  border-radius: var(--radius-lg); padding: 28px;
+}
+.ig-profile-hero {
+  min-height: 180px; border-radius: var(--radius);
+  background: linear-gradient(135deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);
+  display: flex; align-items: center; justify-content: center; text-align: center;
+  color: var(--white); padding: 28px; margin-bottom: 18px;
+}
+.ig-profile-hero strong { display: block; font-family: 'Playfair Display', serif; font-size: 24px; margin-bottom: 8px; }
+.ig-profile-hero span { display: block; font-size: 14px; opacity: 0.86; line-height: 1.55; }
+.ig-profile-actions { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.ig-profile-actions a {
+  display: flex; align-items: center; justify-content: center;
+  border-radius: 8px; padding: 12px 14px; text-decoration: none;
+  font-size: 13px; font-weight: 500; transition: all 0.2s;
+}
+.ig-primary-link { background: var(--navy); color: var(--white); }
+.ig-secondary-link { border: 1px solid rgba(0,0,0,0.14); color: var(--navy); }
+.ig-profile-actions a:hover { transform: translateY(-1px); box-shadow: 0 8px 20px rgba(13,27,42,0.08); }
+
+/* YouTube embed */
+.yt-embed-wrap {
+  border-radius: var(--radius-lg); overflow: hidden;
+  border: 1px solid rgba(0,0,0,0.08);
+  aspect-ratio: 16/9; background: #000;
+}
+.yt-embed-wrap iframe { width: 100%; height: 100%; border: none; display: block; }
+
+/* Loading / error */
+.feed-loading { text-align: center; padding: 48px 20px; color: var(--text-muted); font-size: 14px; }
+.feed-loading .spin {
+  display: inline-block; width: 24px; height: 24px;
+  border: 2px solid rgba(0,0,0,0.1); border-top-color: var(--gold);
+  border-radius: 50%; animation: spin 0.7s linear infinite; margin-bottom: 12px;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+.feed-error {
+  text-align: center; padding: 32px 20px; font-size: 13px; color: var(--text-muted);
+  background: var(--white); border-radius: var(--radius); border: 1px dashed rgba(0,0,0,0.12);
+}
+.feed-error a { color: var(--navy); font-weight: 500; text-decoration: none; }
+
+/* YouTube video list */
+.yt-list { display: flex; flex-direction: column; gap: 10px; }
+.yt-item {
+  display: flex; gap: 12px; align-items: flex-start;
+  background: var(--white); border-radius: var(--radius); padding: 10px;
+  border: 1px solid rgba(0,0,0,0.06); text-decoration: none; color: inherit;
+  transition: all 0.2s;
+}
+.yt-item:hover { transform: translateX(4px); box-shadow: 0 6px 20px rgba(13,27,42,0.08); }
+.yt-thumb-wrap {
+  position: relative; flex-shrink: 0; width: 130px;
+  border-radius: 6px; overflow: hidden; aspect-ratio: 16/9; background: #000;
+}
+.yt-thumb-wrap img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.yt-play-btn {
+  position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;
+  background: rgba(0,0,0,0.28);
+}
+.yt-play-btn svg { width: 30px; height: 30px; fill: white; filter: drop-shadow(0 1px 3px rgba(0,0,0,0.4)); }
+.yt-info { flex: 1; min-width: 0; padding-top: 2px; }
+.yt-title {
+  font-size: 13px; font-weight: 500; line-height: 1.45; color: var(--text);
+  display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
+}
+.yt-meta { font-size: 11px; color: var(--text-muted); margin-top: 6px; }
+.yt-feed-note { font-size: 12px; color: var(--text-muted); margin-top: 10px; text-align: center; }
+.yt-feed-note a { color: var(--navy); text-decoration: none; font-weight: 500; }
+
+@media (max-width: 900px) {
+  .feeds-grid { grid-template-columns: 1fr; }
+  .yt-thumb-wrap { width: 110px; }
+  .ig-profile-actions { grid-template-columns: 1fr; }
+}
 
 /* CONTACT */
 .contact { background: var(--white); }
@@ -350,7 +482,7 @@ footer {
 
 /* WHATSAPP */
 .wa-float {
-  position: fixed; bottom: 28px; left: 28px; z-index: 999;
+  position: fixed; bottom: 28px; right: 28px; z-index: 999;
   width: 56px; height: 56px; background: #25D366; border-radius: 50%;
   display: flex; align-items: center; justify-content: center;
   box-shadow: 0 4px 16px rgba(37,211,102,0.4); transition: transform 0.2s;
@@ -393,6 +525,46 @@ footer {
   .footer-grid { grid-template-columns: 1fr; }
   .form-row { grid-template-columns: 1fr; }
 }
+
+/* SSC RESULTS */
+.ssc-results { background: var(--navy); padding: 90px 8vw; }
+.ssc-results .section-eyebrow { color: var(--gold); }
+.ssc-results .section-title { color: var(--white); }
+.ssc-results .section-sub { color: rgba(255,255,255,0.65); }
+.ssc-banner-wrap {
+  margin-top: 48px; border-radius: var(--radius-lg); overflow: hidden;
+  box-shadow: 0 24px 72px rgba(0,0,0,0.45);
+  border: 2px solid rgba(200,151,58,0.4);
+  position: relative;
+}
+.ssc-banner-wrap img {
+  width: 100%; display: block; height: auto;
+}
+.ssc-badge-row {
+  display: flex; justify-content: center; gap: 24px; flex-wrap: wrap;
+  margin-top: 40px;
+}
+.ssc-badge {
+  background: rgba(200,151,58,0.12); border: 1px solid rgba(200,151,58,0.35);
+  border-radius: var(--radius); padding: 20px 28px; text-align: center; min-width: 160px;
+}
+.ssc-badge .sb-num {
+  font-family: 'Playfair Display', serif; font-size: 36px; color: var(--gold);
+  font-weight: 700; line-height: 1;
+}
+.ssc-badge .sb-lbl { font-size: 13px; color: rgba(255,255,255,0.6); margin-top: 6px; letter-spacing: 0.04em; }
+.ssc-topper-note {
+  margin-top: 36px; text-align: center;
+  font-family: 'Playfair Display', serif; font-size: 18px; font-style: italic;
+  color: rgba(255,255,255,0.75); line-height: 1.6;
+}
+.ssc-topper-note strong { color: var(--gold-light); font-style: normal; }
+@media (max-width: 900px) {
+  .ssc-badge-row { gap: 14px; }
+  .ssc-badge { min-width: 130px; padding: 16px 18px; }
+  .ssc-badge .sb-num { font-size: 28px; }
+}
+
 </style>
 </head>
 <body>
@@ -400,13 +572,14 @@ footer {
 <!-- NAV -->
 <nav id="navbar">
   <a class="nav-brand" href="#">
-    <img class="nav-logo" src="https://columbusmodelhighschool.com/Images/logo.png" alt="CMHS Logo">
+    <img class="nav-logo" src="https://columbusmodelhighschool.com/Images/logo.jpg" alt="Columbus Model High School logo" width="40" height="40">
     <div class="nav-name">Columbus Model High School <span>Miyapur, Hyderabad</span></div>
   </a>
   <ul class="nav-links">
     <li><a href="#about">About</a></li>
     <li><a href="#academics">Academics</a></li>
     <li><a href="#admissions">Admissions</a></li>
+    <li><a href="#results">Results</a></li>
     <li><a href="#student-life">Student Life</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
@@ -422,6 +595,7 @@ footer {
   <a href="#about" onclick="toggleMobileNav()">About</a>
   <a href="#academics" onclick="toggleMobileNav()">Academics</a>
   <a href="#admissions" onclick="toggleMobileNav()">Admissions</a>
+  <a href="#results" onclick="toggleMobileNav()">Results</a>
   <a href="#student-life" onclick="toggleMobileNav()">Student Life</a>
   <a href="#contact" onclick="toggleMobileNav()">Contact</a>
   <a class="btn-primary" href="#admissions" onclick="toggleMobileNav()">Apply Now</a>
@@ -431,8 +605,8 @@ footer {
 <section class="hero" id="home">
   <div class="hero-left">
     <div class="hero-badge">Admissions Open 2026–27</div>
-    <h1 class="hero-h1">Nurturing <em>Minds,</em><br>Shaping Futures</h1>
-    <p class="hero-sub">Columbus Model High School, Miyapur — where technology meets tradition to create confident, curious, and capable learners ready for the world.</p>
+    <h1 class="hero-h1">Columbus Model<br><em>High School,</em> Miyapur</h1>
+    <p class="hero-sub">An SSC school in Miyapur, Hyderabad, helping students grow through strong academics, values, technology-enabled classrooms, and joyful learning.</p>
     <div class="hero-actions">
       <a class="btn-primary" href="#admissions">Apply for Admission →</a>
       <a class="btn-outline" href="#about">Explore School</a>
@@ -444,7 +618,7 @@ footer {
     </div>
   </div>
   <div class="hero-right">
-    <img src="https://columbusmodelhighschool.com/Images/Campus.avif" alt="Columbus Model High School Campus, Miyapur">
+    <img src="https://columbusmodelhighschool.com/Images/Campus.avif" alt="Columbus Model High School campus in Miyapur, Hyderabad" width="1400" height="1000" fetchpriority="high">
     <div class="hero-card">
       <div class="hc-label">Curriculum</div>
       <div class="hc-val">SSC</div>
@@ -464,6 +638,7 @@ footer {
     <span>Arts · Music · Drama</span><span class="dot">·</span>
     <span>MUN & Debate</span><span class="dot">·</span>
     <span>Miyapur, Hyderabad</span><span class="dot">·</span>
+    <span>🏆 100% SSC Pass Result 2026</span><span class="dot">·</span>
     <span>Telangana SSC Curriculum</span><span class="dot">·</span>
     <span>Pre-Primary to Grade 10</span><span class="dot">·</span>
     <span>Robotics & STEM Clubs</span><span class="dot">·</span>
@@ -475,14 +650,55 @@ footer {
   </div>
 </div>
 
+
+<!-- SSC RESULTS 2026 -->
+<section class="ssc-results" id="results" aria-label="SSC Class 10 Results 2026 — Columbus Model High School">
+  <div class="section-eyebrow">SSC Class 10 Results 2026</div>
+  <h2 class="section-title">100% Pass Result —<br>Every Student Succeeds</h2>
+  <p class="section-sub">Columbus Model High School, Miyapur is proud to announce a 100% pass rate in 2026 — an +11 point improvement since 2023. Columbus now tops the Serilingampally cluster, outperforming both Rangareddy District and Telangana State averages.</p>
+
+  <div class="ssc-banner-wrap">
+    <img
+      src="Images/ssc-results-2026-optimized.jpg"
+      alt="SSC Class 10 Results 2026 trend chart for Columbus Model High School, Miyapur"
+      loading="lazy"
+      width="1400"
+      height="790"
+    >
+  </div>
+
+  <div class="ssc-badge-row">
+    <div class="ssc-badge">
+      <div class="sb-num">100%</div>
+      <div class="sb-lbl">Pass Rate</div>
+    </div>
+    <div class="ssc-badge">
+      <div class="sb-num">Cheers</div>
+      <div class="sb-lbl">To Our Achievers</div>
+    </div>
+    <div class="ssc-badge">
+      <div class="sb-num">10</div>
+      <div class="sb-lbl">Distinguished Students</div>
+    </div>
+    <div class="ssc-badge">
+      <div class="sb-num">29+</div>
+      <div class="sb-lbl">Years of Excellence</div>
+    </div>
+  </div>
+
+  <p class="ssc-topper-note">
+    Heartiest congratulations to all our achievers and their families!
+  </p>
+</section>
+
 <!-- ABOUT -->
 <section class="about" id="about">
   <div class="section-eyebrow">Who we are</div>
   <h2 class="section-title">A Legacy of Learning<br>in Miyapur</h2>
   <div class="about-grid">
     <div class="about-images">
-      <img class="about-img-main" src="https://columbusmodelhighschool.com/Images/Campus.avif" alt="CMHS Campus">
-      <img class="about-img-inset" src="https://columbusmodelhighschool.com/Images/Primary.png" alt="Students at CMHS">
+      <img class="about-img-main" src="https://columbusmodelhighschool.com/Images/Campus.avif" alt="Columbus Model High School campus building in Miyapur" loading="lazy" width="900" height="675">
+      <img class="about-img-inset" src="Images/Primary-optimized.jpg" alt="Students learning at Columbus Model High School" loading="lazy" width="480" height="480">
     </div>
     <div class="about-content">
       <p class="section-sub">Rooted in Hyderabad's growing tech corridor, we combine academic rigour with holistic development — producing students who are intellectually sharp and socially aware.</p>
@@ -523,7 +739,7 @@ footer {
   <p class="section-sub">From foundational years to board exam preparation — a seamless, purposeful academic journey under the Telangana SSC curriculum.</p>
   <div class="programs-grid">
     <a class="program-card" href="https://columbusmodelhighschool.com/primary-years.html">
-      <img class="program-img" src="https://columbusmodelhighschool.com/Images/Primary.png" alt="Primary Years">
+      <img class="program-img" src="Images/Primary-optimized.jpg" alt="Primary school students at Columbus Model High School" loading="lazy" width="600" height="400">
       <div class="program-body">
         <div class="program-tag">Pre-Primary & Primary</div>
         <h3 class="program-name">Primary Years</h3>
@@ -536,7 +752,7 @@ footer {
       </div>
     </a>
     <a class="program-card" href="https://columbusmodelhighschool.com/middle-school.html">
-      <img class="program-img" src="https://columbusmodelhighschool.com/Images/Middle.png" alt="Middle School">
+      <img class="program-img" src="Images/Middle-optimized.jpg" alt="Middle school students at Columbus Model High School" loading="lazy" width="600" height="400">
       <div class="program-body">
         <div class="program-tag">Grades 6–8</div>
         <h3 class="program-name">Middle School</h3>
@@ -549,7 +765,7 @@ footer {
       </div>
     </a>
     <a class="program-card" href="https://columbusmodelhighschool.com/high-school.html">
-      <img class="program-img" src="https://columbusmodelhighschool.com/Images/High.png" alt="High School">
+      <img class="program-img" src="Images/High-optimized.jpg" alt="High school students at Columbus Model High School" loading="lazy" width="600" height="400">
       <div class="program-body">
         <div class="program-tag">Grades 9–10</div>
         <h3 class="program-name">High School</h3>
@@ -659,20 +875,20 @@ footer {
         <div class="form-row">
           <div class="form-field">
             <label>Parent name *</label>
-            <input type="text" placeholder="Your full name" required>
+            <input name="parentName" type="text" placeholder="Your full name" required>
           </div>
           <div class="form-field">
             <label>Phone number *</label>
-            <input type="tel" placeholder="+91 XXXXX XXXXX" required>
+            <input name="phone" type="tel" placeholder="+91 XXXXX XXXXX" required>
           </div>
         </div>
         <div class="form-field">
           <label>Student name *</label>
-          <input type="text" placeholder="Child's full name" required>
+          <input name="studentName" type="text" placeholder="Child's full name" required>
         </div>
         <div class="form-field">
           <label>Applying for grade *</label>
-          <select required>
+          <select name="grade" required>
             <option value="">Select grade</option>
             <option>Pre-Primary (Nursery / KG)</option>
             <option>Grade 1–5 (Primary)</option>
@@ -687,6 +903,8 @@ footer {
         <a href="tel:+919000232197">+91 90002 32197</a>
         &nbsp;&nbsp;/&nbsp;&nbsp;
         <a href="tel:+919030474447">+91 90304 74447</a>
+        &nbsp;&nbsp;/&nbsp;&nbsp;
+        <a href="tel:+914045200470">+91 40 4520 0470</a>
       </div>
     </div>
   </div>
@@ -724,25 +942,46 @@ footer {
   </div>
 </section>
 
-<!-- SOCIAL -->
+<!-- SOCIAL / LIVE FEEDS -->
 <section class="social" id="gallery">
   <div class="section-eyebrow">Follow our journey</div>
   <h2 class="section-title">Stay Connected<br>with CMHS</h2>
-  <div class="social-grid">
-    <a class="social-card" href="https://www.instagram.com/columbusmodelhighschool" target="_blank" rel="noopener">
-      <div class="social-icon">📸</div>
-      <div class="social-platform">Instagram</div>
-      <div class="social-handle">@columbusmodelhighschool</div>
-      <div class="social-desc">Real moments, real students, real growth. School events, student achievements, arts, robotics, and daily school life.</div>
-      <div class="social-cta">Follow on Instagram →</div>
-    </a>
-    <a class="social-card" href="https://www.youtube.com/@CMHS_Miyapur" target="_blank" rel="noopener">
-      <div class="social-icon">🎬</div>
-      <div class="social-platform">YouTube</div>
-      <div class="social-handle">@CMHS_Miyapur</div>
-      <div class="social-desc">Annual Day, Robotics Showcase, Sports Day highlights and more. Subscribe to stay updated with school events and achievements.</div>
-      <div class="social-cta">Subscribe on YouTube →</div>
-    </a>
+  <div class="feeds-grid">
+
+    <!-- INSTAGRAM LIVE FEED -->
+    <div class="feed-panel">
+      <div class="feed-header">
+        <div class="feed-header-left">
+          <div class="feed-platform-icon ig">📸</div>
+          <div>
+            <div class="feed-platform-name">Instagram</div>
+            <div class="feed-platform-handle">@columbusmodelhighschool</div>
+          </div>
+        </div>
+        <a class="feed-view-all" href="https://www.instagram.com/columbusmodelhighschool" target="_blank" rel="noopener">Follow →</a>
+      </div>
+      <div id="ig-feed-container">
+        <div class="feed-loading"><div class="spin"></div><br>Loading latest posts…</div>
+      </div>
+    </div>
+
+    <!-- YOUTUBE CHANNEL EMBED -->
+    <div class="feed-panel">
+      <div class="feed-header">
+        <div class="feed-header-left">
+          <div class="feed-platform-icon yt">▶</div>
+          <div>
+            <div class="feed-platform-name">YouTube</div>
+            <div class="feed-platform-handle">@CMHS_Miyapur</div>
+          </div>
+        </div>
+        <a class="feed-view-all" href="https://www.youtube.com/@CMHS_Miyapur" target="_blank" rel="noopener">Subscribe →</a>
+      </div>
+      <div id="yt-feed-container">
+        <div class="feed-loading"><div class="spin"></div><br>Loading videos…</div>
+      </div>
+    </div>
+
   </div>
 </section>
 
@@ -761,7 +1000,8 @@ footer {
         <div class="ci-label">Phone</div>
         <div class="ci-val">
           <a href="tel:+919000232197">+91 90002 32197</a><br>
-          <a href="tel:+919030474447">+91 90304 74447</a>
+          <a href="tel:+919030474447">+91 90304 74447</a><br>
+          <a href="tel:+914045200470">+91 40 4520 0470</a>
         </div>
       </div>
       <div class="contact-item">
@@ -785,19 +1025,19 @@ footer {
       <form id="contactForm" onsubmit="submitContact(event)">
         <div class="form-field">
           <label>Your name *</label>
-          <input type="text" placeholder="Full name" required>
+          <input name="name" type="text" placeholder="Full name" required>
         </div>
         <div class="form-field">
           <label>Phone number *</label>
-          <input type="tel" placeholder="+91 XXXXX XXXXX" required>
+          <input name="phone" type="tel" placeholder="+91 XXXXX XXXXX" required>
         </div>
         <div class="form-field">
           <label>Email</label>
-          <input type="email" placeholder="your@email.com">
+          <input name="email" type="email" placeholder="your@email.com">
         </div>
         <div class="form-field">
           <label>Message *</label>
-          <input type="text" placeholder="How can we help you?" required>
+          <input name="message" type="text" placeholder="How can we help you?" required>
         </div>
         <button type="submit" class="form-submit">Send Message →</button>
       </form>
@@ -810,7 +1050,7 @@ footer {
   <div class="footer-grid">
     <div class="footer-brand">
       <div class="footer-logo">
-        <img src="https://columbusmodelhighschool.com/Images/logo.png" alt="CMHS Logo">
+        <img src="https://columbusmodelhighschool.com/Images/logo.jpg" alt="Columbus Model High School logo" loading="lazy" width="48" height="48">
         <span>Columbus Model<br>High School · Miyapur</span>
       </div>
       <p class="footer-tagline">Nurturing Minds, Shaping Futures. Sparking Growth and Joy in every learner's journey since our founding in Miyapur, Hyderabad.</p>
@@ -822,6 +1062,7 @@ footer {
         <li><a href="#academics">Academics</a></li>
         <li><a href="#admissions">Admissions</a></li>
         <li><a href="#student-life">Student life</a></li>
+        <li><a href="#results">SSC Results</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </div>
@@ -840,6 +1081,7 @@ footer {
       <ul>
         <li><a href="tel:+919000232197">+91 90002 32197</a></li>
         <li><a href="tel:+919030474447">+91 90304 74447</a></li>
+        <li><a href="tel:+914045200470">+91 40 4520 0470</a></li>
         <li><a href="mailto:enquiry@columbusmodelhighschool.com">Email us</a></li>
         <li><a href="https://www.instagram.com/columbusmodelhighschool" target="_blank">Instagram</a></li>
         <li><a href="https://www.youtube.com/@CMHS_Miyapur" target="_blank">YouTube</a></li>
@@ -860,27 +1102,173 @@ footer {
 </a>
 
 <script>
+var YT_CHANNEL_ID   = 'UCT9t8lhK66HKdTWFolNbDGQ';
+var YT_HANDLE       = 'CMHS_Miyapur';
+var IG_HANDLE       = 'columbusmodelhighschool';
+
+/* ============================================================
+   YOUTUBE FEED
+   Dynamic RSS cards. Avoids embedded player error 153.
+   ============================================================ */
+function loadYouTubeFeed() {
+  var container  = document.getElementById('yt-feed-container');
+
+  function escapeHtml(value) {
+    return String(value || '').replace(/[&<>"']/g, function(ch) {
+      return ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[ch];
+    });
+  }
+
+  function formatDate(value) {
+    if (!value) return '';
+    var date = new Date(value);
+    if (Number.isNaN(date.getTime())) return '';
+    return date.toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' });
+  }
+
+  function showChannelCard() {
+    container.innerHTML =
+      '<a href="https://www.youtube.com/@' + YT_HANDLE + '" target="_blank" rel="noopener"'
+    + ' style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;'
+    + 'background:var(--white);border:1px solid rgba(0,0,0,0.08);border-radius:var(--radius-lg);'
+    + 'padding:48px 24px;text-decoration:none;">'
+    + '<div style="width:64px;height:64px;background:#ff0000;border-radius:14px;display:flex;align-items:center;justify-content:center;">'
+    + '<svg viewBox="0 0 24 24" style="width:32px;height:32px;fill:white;"><path d="M8 5v14l11-7z"/></svg>'
+    + '</div>'
+    + '<div style="text-align:center;">'
+    + '<div style="font-family:\'Playfair Display\',serif;font-size:18px;color:var(--text);margin-bottom:4px;">CMHS Miyapur</div>'
+    + '<div style="font-size:13px;color:var(--text-muted);">@' + YT_HANDLE + '</div>'
+    + '</div>'
+    + '<div style="background:var(--navy);color:var(--white);font-size:13px;font-weight:500;'
+    + 'padding:10px 24px;border-radius:8px;">Visit our YouTube Channel &rarr;</div>'
+    + '</a>';
+  }
+
+  function renderVideos(videos) {
+    if (!videos.length) {
+      showChannelCard();
+      return;
+    }
+
+    var html = '<div class="yt-list">';
+    videos.slice(0, 5).forEach(function(video) {
+      var id = escapeHtml(video.id);
+      var title = escapeHtml(video.title || 'Latest CMHS video');
+      var published = formatDate(video.published);
+      html += '<a class="yt-item" href="https://www.youtube.com/watch?v=' + id + '" target="_blank" rel="noopener">'
+            + '<div class="yt-thumb-wrap">'
+            + '<img src="https://i.ytimg.com/vi/' + id + '/mqdefault.jpg" alt="' + title + '" loading="lazy" width="320" height="180"'
+            + ' onerror="this.onerror=null;this.src=\'https://i.ytimg.com/vi/' + id + '/default.jpg\'">'
+            + '<div class="yt-play-btn"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8 5v14l11-7z"/></svg></div>'
+            + '</div>'
+            + '<div class="yt-info"><div class="yt-title">' + title + '</div>'
+            + (published ? '<div class="yt-meta">' + published + '</div>' : '')
+            + '</div></a>';
+    });
+    html += '</div><p class="yt-feed-note">'
+          + '<a href="https://www.youtube.com/@' + YT_HANDLE + '" target="_blank" rel="noopener">View all videos &rarr;</a>'
+          + '</p>';
+    container.innerHTML = html;
+  }
+
+  function videosFromXml(xmlText) {
+    var parser = new DOMParser();
+    var xml = parser.parseFromString(xmlText, 'text/xml');
+    return Array.from(xml.querySelectorAll('entry')).map(function(entry) {
+      var id = entry.querySelector('videoId') ? entry.querySelector('videoId').textContent : '';
+      var title = entry.querySelector('title') ? entry.querySelector('title').textContent : '';
+      var published = entry.querySelector('published') ? entry.querySelector('published').textContent : '';
+      return { id: id, title: title, published: published };
+    }).filter(function(video) { return video.id; });
+  }
+
+  var rssUrl = 'https://www.youtube.com/feeds/videos.xml?channel_id=' + YT_CHANNEL_ID;
+  var allOriginsUrl = 'https://api.allorigins.win/raw?url=' + encodeURIComponent(rssUrl);
+  var rss2JsonUrl = 'https://api.rss2json.com/v1/api.json?rss_url=' + encodeURIComponent(rssUrl);
+
+  fetch(allOriginsUrl, { signal: AbortSignal.timeout(8000) })
+    .then(function(response) { return response.ok ? response.text() : Promise.reject('AllOrigins ' + response.status); })
+    .then(function(xmlText) { renderVideos(videosFromXml(xmlText)); })
+    .catch(function() {
+      fetch(rss2JsonUrl, { signal: AbortSignal.timeout(8000) })
+        .then(function(response) { return response.ok ? response.json() : Promise.reject('rss2json ' + response.status); })
+        .then(function(data) {
+          var videos = (data.items || []).map(function(item) {
+            var match = String(item.link || '').match(/[?&]v=([^&]+)/);
+            return {
+              id: match ? match[1] : '',
+              title: item.title,
+              published: item.pubDate
+            };
+          }).filter(function(video) { return video.id; });
+          renderVideos(videos);
+        })
+        .catch(showChannelCard);
+    });
+}
+
+/* ============================================================
+   INSTAGRAM FEED
+   ============================================================ */
+function loadInstagramFeed() {
+  var container = document.getElementById('ig-feed-container');
+  container.innerHTML =
+    '<div class="ig-profile-card">'
+  + '<div class="ig-profile-hero">'
+  + '<div><strong>@' + IG_HANDLE + '</strong>'
+  + '<span>Latest school updates, celebrations, student achievements, campus moments, and event highlights are shared on Instagram.</span></div>'
+  + '</div>'
+  + '</div>';
+  container.querySelector('.ig-profile-card').insertAdjacentHTML('beforeend',
+    '<div class="ig-profile-actions">'
+  + '<a class="ig-primary-link" href="https://www.instagram.com/' + IG_HANDLE + '/" target="_blank" rel="noopener">Open Instagram</a>'
+  + '<a class="ig-secondary-link" href="https://www.instagram.com/' + IG_HANDLE + '/reels/" target="_blank" rel="noopener">Watch Reels</a>'
+  + '</div>'
+  + '<p class="yt-feed-note">Instagram blocks public live feeds on static websites unless an official API token, backend, or working widget service is connected.</p>');
+}
+
+/* ============================================================
+   NAV & FORMS
+   ============================================================ */
 function toggleMobileNav() {
   document.getElementById('mobileNav').classList.toggle('open');
 }
 function submitForm(e) {
   e.preventDefault();
-  const btn = e.target.querySelector('.form-submit');
-  btn.textContent = 'Sending...';
-  btn.disabled = true;
-  setTimeout(() => {
-    e.target.innerHTML = '<div style="text-align:center;padding:40px 20px"><div style="font-size:40px;margin-bottom:16px">✅</div><p style="font-size:18px;font-weight:500;margin-bottom:8px">Request received!</p><p style="font-size:14px;color:#6b6b6b">Our admissions team will call you within 24 hours.</p><p style="margin-top:20px;font-size:14px">Or call us now: <a href="tel:+919000232197" style="color:#0d1b2a;font-weight:500">+91 90002 32197</a></p></div>';
-  }, 1200);
+  var form = e.target;
+  var btn = form.querySelector('.form-submit');
+  var data = new FormData(form);
+  var message = 'Admission enquiry from website:%0A'
+    + 'Parent: ' + encodeURIComponent(data.get('parentName') || '') + '%0A'
+    + 'Phone: ' + encodeURIComponent(data.get('phone') || '') + '%0A'
+    + 'Student: ' + encodeURIComponent(data.get('studentName') || '') + '%0A'
+    + 'Grade: ' + encodeURIComponent(data.get('grade') || '');
+  btn.textContent = 'Opening WhatsApp...'; btn.disabled = true;
+  window.open('https://wa.me/919000232197?text=' + message, '_blank', 'noopener');
+  setTimeout(function() { btn.textContent = 'Request Callback'; btn.disabled = false; }, 1200);
 }
 function submitContact(e) {
   e.preventDefault();
-  const btn = e.target.querySelector('.form-submit');
-  btn.textContent = 'Sending...';
-  btn.disabled = true;
-  setTimeout(() => {
-    e.target.innerHTML = '<div style="text-align:center;padding:40px 20px"><div style="font-size:40px;margin-bottom:16px">✅</div><p style="font-size:18px;font-weight:500;margin-bottom:8px">Message sent!</p><p style="font-size:14px;color:#6b6b6b">We\'ll get back to you within 24 hours.</p></div>';
-  }, 1200);
+  var form = e.target;
+  var btn = form.querySelector('.form-submit');
+  var data = new FormData(form);
+  var message = 'Website contact message:%0A'
+    + 'Name: ' + encodeURIComponent(data.get('name') || '') + '%0A'
+    + 'Phone: ' + encodeURIComponent(data.get('phone') || '') + '%0A'
+    + 'Email: ' + encodeURIComponent(data.get('email') || '') + '%0A'
+    + 'Message: ' + encodeURIComponent(data.get('message') || '');
+  btn.textContent = 'Opening WhatsApp...'; btn.disabled = true;
+  window.open('https://wa.me/919000232197?text=' + message, '_blank', 'noopener');
+  setTimeout(function() { btn.textContent = 'Send Message'; btn.disabled = false; }, 1200);
 }
+
+/* ============================================================
+   INIT
+   ============================================================ */
+document.addEventListener('DOMContentLoaded', function() {
+  loadInstagramFeed();
+  loadYouTubeFeed();
+});
 </script>
 </body>
 </html>
