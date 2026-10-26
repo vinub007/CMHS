@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Our Faculty | Columbus Model High School</title>
+  <meta name="description" content="Meet the teachers and staff at Columbus Model High School in Miyapur, Hyderabad.">
+  <link rel="canonical" href="https://columbusmodelhighschool.com/faculty.html">
+  <meta property="og:title" content="Our Faculty | Columbus Model High School">
+  <meta property="og:description" content="Meet the teachers and staff at Columbus Model High School in Miyapur, Hyderabad.">
+  <meta property="og:image" content="https://columbusmodelhighschool.com/Images/Campus.avif">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://columbusmodelhighschool.com/faculty.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Our Faculty | Columbus Model High School">
+  <meta name="twitter:description" content="Meet the teachers and staff at Columbus Model High School in Miyapur, Hyderabad.">
+  <meta name="twitter:image" content="https://columbusmodelhighschool.com/Images/Campus.avif">
+  <link rel="icon" href="Images/logo.png" type="image/png">
+  <link rel="stylesheet" href="dist/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <style>
+    .faculty-hero { background: #0d1b2a; color: #fff; }
+    .faculty-hero h1 { max-width: 800px; }
+    .faculty-hero p { max-width: 680px; color: #e2e8f0; }
+    .faculty-section { min-height: 55vh; }
+    .faculty-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr)); gap: 24px; margin-top: 32px; }
+    .faculty-card { overflow: hidden; border-radius: 12px; background: #fff; box-shadow: 0 8px 28px rgb(15 23 42 / 10%); }
+    .faculty-photo, .faculty-placeholder { display: grid; width: 100%; aspect-ratio: 4 / 3; place-items: center; object-fit: cover; background: #e2e8f0; color: #0d1b2a; }
+    .faculty-placeholder { font-size: 42px; font-weight: 700; }
+    .faculty-card-body { padding: 20px; }
+    .faculty-card h2 { margin: 0 0 6px; font-size: 20px; color: #0d1b2a; }
+    .faculty-role { margin: 0 0 4px; font-weight: 600; }
+    .faculty-subject { margin: 0; color: #475569; }
+    .faculty-status { padding: 20px; border-radius: 8px; background: #f1f5f9; }
+    .faculty-content-note { margin-top: 28px; color: #475569; font-size: 14px; }
+    .faculty-content-note code { overflow-wrap: anywhere; }
+    .faculty-example { max-width: 760px; overflow-x: auto; padding: 16px; border-radius: 8px; background: #0f172a; color: #f8fafc; font-size: 13px; }
+  </style>
+</head>
+<body class="bg-slate-50 font-sans antialiased">
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="school-header sticky top-0 z-40 shadow-sm">
+    <div class="container mx-auto px-6 py-4">
+      <div class="flex items-center justify-between">
+        <a href="index.html" class="school-brand" aria-label="Columbus Model High School home">
+          <img src="Images/logo.png" alt="" class="school-brand-logo" width="48" height="48">
+          <span class="school-brand-name">Columbus Model High School<span>Miyapur, Hyderabad</span></span>
+        </a>
+        <nav class="hidden md:flex items-center space-x-6" aria-label="Main navigation">
+          <a href="index.html#about" class="nav-link">Our School</a>
+          <a href="index.html#academics" class="nav-link">Academics</a>
+          <a href="index.html#results" class="nav-link">SSC</a>
+          <a href="faculty.html" class="nav-link" aria-current="page">Faculty</a>
+          <a href="index.html#admissions" class="nav-link">Admissions</a>
+          <a href="index.html#admissions" class="school-nav-cta">Apply Now →</a>
+        </nav>
+        <div class="md:hidden">
+          <button id="mobile-menu-button" type="button" aria-label="Open navigation menu" aria-controls="mobile-menu" aria-expanded="false" class="school-menu-toggle">
+            <i class="fas fa-bars fa-lg" aria-hidden="true"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+    <nav id="mobile-menu" class="school-mobile-menu hidden md:hidden" aria-label="Mobile navigation" aria-hidden="true">
+      <a href="index.html#about" class="school-mobile-link">Our School</a>
+      <a href="index.html#academics" class="school-mobile-link">Academics</a>
+      <a href="index.html#results" class="school-mobile-link">SSC</a>
+      <a href="faculty.html" class="school-mobile-link" aria-current="page">Faculty</a>
+      <a href="index.html#admissions" class="school-mobile-link">Admissions</a>
+      <a href="index.html#contact" class="school-mobile-link">Visit us</a>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <section class="faculty-hero px-6 py-16 md:py-24">
+      <div class="container mx-auto">
+        <p class="mb-3 text-sm font-semibold uppercase tracking-widest text-amber-300">Columbus Model High School · Miyapur</p>
+        <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight">Our Faculty</h1>
+        <p class="mt-5 text-lg">Meet the teachers and staff who support learning across our school.</p>
+      </div>
+    </section>
+
+    <section class="faculty-section container mx-auto px-6 py-12 md:py-16" aria-labelledby="faculty-list-title">
+      <h2 id="faculty-list-title" class="text-3xl font-bold tracking-tight text-slate-800 sm:text-4xl">Teachers and staff</h2>
+      <p id="faculty-status" class="faculty-status mt-6" role="status" aria-live="polite">Faculty profiles are being prepared. For current faculty information, please contact the school.</p>
+      <div id="faculty-grid" class="faculty-grid"></div>
+      <p class="mt-6"><a class="font-semibold text-sky-800 underline" href="tel:+919000232197">Contact the school for faculty information · +91 90002 32197</a></p>
+    </section>
+  </main>
+
+  <footer class="bg-slate-900 text-white">
+    <div class="container mx-auto px-6 py-10">
+      <nav class="flex flex-wrap gap-x-6 gap-y-3" aria-label="Footer navigation">
+        <a class="text-slate-200 underline" href="index.html">Home</a>
+        <a class="text-slate-200 underline" href="index.html#academics">Academics</a>
+        <a class="text-slate-200 underline" href="index.html#admissions">Admissions</a>
+        <a class="text-slate-200 underline" href="privacy.html">Privacy policy</a>
+        <a class="text-slate-200 underline" href="index.html#cookieBanner">Cookie settings</a>
+      </nav>
+      <p class="mt-6 text-sm text-slate-300">Columbus Model High School · Plot No: 5, Opp. Miyapur Depot, Mayuri Nagar, Miyapur, Hyderabad – 500049, Telangana</p>
+      <p class="mt-2 text-sm text-slate-300"><a class="underline" href="tel:+919000232197">+91 90002 32197</a> · <a class="underline" href="mailto:enquiry@columbusmodelhighschool.com">enquiry@columbusmodelhighschool.com</a></p>
+      <p class="mt-6 text-sm text-slate-400">© 2026 Columbus Model High School. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <a class="page-wa-float" href="https://wa.me/919000232197?text=Hi%2C%20I%27m%20interested%20in%20admissions%20at%20Columbus%20Model%20High%20School%2C%20Miyapur." target="_blank" rel="noopener" aria-label="Chat with admissions on WhatsApp">WhatsApp admissions</a>
+  <a class="page-apply-float" href="index.html#admissions">Apply Now</a>
+
+  <script>
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const facultyGrid = document.getElementById('faculty-grid');
+    const facultyStatus = document.getElementById('faculty-status');
+
+    mobileMenuButton.addEventListener('click', () => {
+      const isClosed = mobileMenu.classList.toggle('hidden');
+      mobileMenu.setAttribute('aria-hidden', String(isClosed));
+      mobileMenuButton.setAttribute('aria-expanded', String(!isClosed));
+      mobileMenuButton.setAttribute('aria-label', isClosed ? 'Open navigation menu' : 'Close navigation menu');
+    });
+    document.addEventListener('keydown', event => {
+      if (event.key === 'Escape' && !mobileMenu.classList.contains('hidden')) {
+        mobileMenu.classList.add('hidden');
+        mobileMenu.setAttribute('aria-hidden', 'true');
+        mobileMenuButton.setAttribute('aria-expanded', 'false');
+        mobileMenuButton.setAttribute('aria-label', 'Open navigation menu');
+        mobileMenuButton.focus();
+      }
+    });
+
+    function addFacultyCard(member) {
+      if (!member || member.publish !== true || !member.name || !member.role || !member.subject) {
+        return false;
+      }
+
+      const card = document.createElement('article');
+      card.className = 'faculty-card';
+      const name = String(member.name).trim();
+      if (member.photoConsent === true && typeof member.photo === 'string'
+        && /^Images\/faculty\/[A-Za-z0-9._-]+\.(?:avif|webp|png|jpe?g)$/i.test(member.photo)) {
+        const image = document.createElement('img');
+        image.className = 'faculty-photo';
+        image.src = member.photo;
+        image.alt = 'Photo of ' + name;
+        image.loading = 'lazy';
+        image.width = 480;
+        image.height = 360;
+        image.addEventListener('error', () => {
+          const fallback = document.createElement('div');
+          fallback.className = 'faculty-placeholder';
+          fallback.setAttribute('aria-hidden', 'true');
+          fallback.textContent = name.charAt(0).toLocaleUpperCase('en-IN');
+          image.replaceWith(fallback);
+        }, { once: true });
+        card.appendChild(image);
+      } else {
+        const placeholder = document.createElement('div');
+        placeholder.className = 'faculty-placeholder';
+        placeholder.setAttribute('aria-hidden', 'true');
+        placeholder.textContent = name.charAt(0).toLocaleUpperCase('en-IN');
+        card.appendChild(placeholder);
+      }
+
+      const body = document.createElement('div');
+      body.className = 'faculty-card-body';
+      const heading = document.createElement('h2');
+      heading.textContent = name;
+      const role = document.createElement('p');
+      role.className = 'faculty-role';
+      role.textContent = String(member.role).trim();
+      const subject = document.createElement('p');
+      subject.className = 'faculty-subject';
+      subject.textContent = String(member.subject).trim();
+      body.append(heading, role, subject);
+      card.appendChild(body);
+      facultyGrid.appendChild(card);
+      return true;
+    }
+
+    fetch('faculty.json')
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Faculty content could not be loaded (HTTP ' + response.status + ').');
+        }
+        return response.json();
+      })
+      .then(content => {
+        if (!content || !Array.isArray(content.staff)) {
+          throw new Error('Faculty content must contain a staff array.');
+        }
+        const publishedCount = content.staff.reduce((count, member) => count + Number(addFacultyCard(member)), 0);
+        facultyStatus.textContent = publishedCount
+          ? 'Showing ' + publishedCount + ' school-approved faculty profile' + (publishedCount === 1 ? '.' : 's.')
+          : 'Faculty profiles are being prepared. For current faculty information, please contact the school at +91 90002 32197.';
+      })
+      .catch(error => {
+        console.error('Unable to display faculty profiles:', error);
+        facultyStatus.textContent = 'Faculty profiles are temporarily unavailable. Please contact the school at +91 90002 32197.';
+      });
+  </script>
+</body>
+</html>

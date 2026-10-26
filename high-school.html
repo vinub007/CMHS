@@ -1,59 +1,72 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en-IN" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>High School Program | Columbus Model High School</title>
-    <meta name="description" content="Discover the High School Program at Columbus Model High School, focused on college preparation, leadership, and real-world impact.">
+    <meta name="description" content="Explore the high-school programme at Columbus Model High School in Miyapur, Hyderabad.">
+    <link rel="canonical" href="https://columbusmodelhighschool.com/high-school.html">
+    <meta property="og:title" content="High School | Columbus Model High School">
+    <meta property="og:description" content="Explore the high-school programme at Columbus Model High School in Miyapur, Hyderabad.">
+    <meta property="og:image" content="https://columbusmodelhighschool.com/Images/High-optimized.jpg">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://columbusmodelhighschool.com/high-school.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="High School | Columbus Model High School">
+    <meta name="twitter:description" content="Explore the high-school programme at Columbus Model High School in Miyapur, Hyderabad.">
+    <meta name="twitter:image" content="https://columbusmodelhighschool.com/Images/High-optimized.jpg">
     <link rel="icon" href="Images/logo.png" type="image/png">
     <link rel="stylesheet" href="dist/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
 </head>
 <body class="bg-slate-50 font-sans antialiased">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
 
     <!-- Header -->
-    <header class="bg-white/80 backdrop-blur-lg sticky top-0 z-40 shadow-sm">
+    <header class="school-header sticky top-0 z-40 shadow-sm">
         <div class="container mx-auto px-6 py-4">
             <div class="flex items-center justify-between">
                 <div class="flex items-center">
-                    <a href="index.html" class="flex items-center space-x-2">
-                        <img src="Images/logo.png" alt="CMHS Logo" class="h-12">
-                        <span class="text-xl font-bold text-slate-800">CMHS</span>
+                    <a href="index.html" class="school-brand" aria-label="Columbus Model High School home">
+                        <img src="Images/logo.png" alt="" class="school-brand-logo" width="48" height="48">
+                        <span class="school-brand-name">Columbus Model High School<span>Miyapur, Hyderabad</span></span>
                     </a>
                 </div>
                 <div class="hidden md:flex items-center space-x-8">
-                    <a href="index.html#about" class="nav-link">About Us</a>
+                    <a href="index.html#about" class="nav-link">Our School</a>
                     <a href="index.html#academics" class="nav-link">Academics</a>
+                    <a href="index.html#results" class="nav-link">SSC</a>
+                    <a href="faculty.html" class="nav-link">Faculty</a>
                     <a href="index.html#admissions" class="nav-link">Admissions</a>
-                    <a href="index.html#instagram" class="nav-link">Gallery</a>
-                    <a href="index.html#contact" class="nav-link">Contact</a>
+                    <a href="index.html#admissions" class="school-nav-cta">Apply Now →</a>
                 </div>
                 <div class="md:hidden">
-                    <button id="mobile-menu-button" class="text-slate-800 focus:outline-none">
-                        <i class="fas fa-bars fa-lg"></i>
+                    <button id="mobile-menu-button" type="button" aria-label="Open navigation menu" aria-controls="mobile-menu" aria-expanded="false" class="school-menu-toggle">
+                        <i class="fas fa-bars fa-lg" aria-hidden="true"></i>
                     </button>
                 </div>
             </div>
         </div>
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden">
-            <a href="index.html#about" class="block py-2 px-6 text-sm text-slate-700 hover:bg-sky-50">About Us</a>
-            <a href="index.html#academics" class="block py-2 px-6 text-sm text-slate-700 hover:bg-sky-50">Academics</a>
-            <a href="index.html#admissions" class="block py-2 px-6 text-sm text-slate-700 hover:bg-sky-50">Admissions</a>
-            <a href="index.html#instagram" class="block py-2 px-6 text-sm text-slate-700 hover:bg-sky-50">Gallery</a>
-            <a href="index.html#contact" class="block py-2 px-6 text-sm text-slate-700 hover:bg-sky-50">Contact</a>
+        <div id="mobile-menu" class="school-mobile-menu hidden md:hidden" aria-hidden="true">
+            <a href="index.html#about" class="school-mobile-link">Our School</a>
+            <a href="index.html#academics" class="school-mobile-link">Academics</a>
+            <a href="index.html#results" class="school-mobile-link">SSC</a>
+            <a href="faculty.html" class="school-mobile-link">Faculty</a>
+            <a href="index.html#admissions" class="school-mobile-link">Admissions</a>
+            <a href="index.html#contact" class="school-mobile-link">Visit us</a>
         </div>
     </header>
 
     <!-- Main Content -->
-    <main>
+    <main id="main-content">
         <!-- Hero Section -->
-        <section class="relative h-[50vh] bg-cover bg-center" style="background-image: url('Images/High.jpg');">
-            <div class="absolute inset-0 bg-black/50"></div>
+        <section class="relative h-[50vh] bg-cover bg-center" style="background-image: url('Images/Campus.avif');">
+            <div class="absolute inset-0" style="background: rgba(13, 27, 42, 0.62);"></div>
             <div class="relative h-full flex flex-col justify-center items-center text-white text-center px-6">
-                <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight">Preparing for College, Career, and a Future of Impact</h1>
-                <p class="mt-4 text-lg md:text-xl max-w-3xl">Our High School program empowers students with the knowledge, skills, and confidence to succeed in their next chapter.</p>
+                <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight">High School</h1>
+                <p class="mt-4 text-lg md:text-xl max-w-3xl">Grades 9–10 at Columbus Model High School, Miyapur, follow the Telangana SSC curriculum. Contact the school for subject, assessment and admission details.</p>
             </div>
         </section>
 
@@ -61,19 +74,19 @@
             <div class="container mx-auto px-6">
                 <!-- College-Preparatory Academics Section -->
                 <div class="mb-16">
-                    <h2 class="text-3xl font-bold tracking-tight text-slate-800 sm:text-4xl text-center mb-12">College-Preparatory Academics</h2>
+                    <h2 class="text-3xl font-bold tracking-tight text-slate-800 sm:text-4xl text-center mb-12">Grades 9–10</h2>
                     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                         <div class="card p-6">
-                            <h3 class="text-xl font-semibold text-slate-700 mb-2">Rigorous Course Catalog</h3>
-                            <p class="text-slate-600 text-sm">A rich and varied course catalog allows students to pursue their interests while building a strong academic foundation for university studies.</p>
+                            <h3 class="text-xl font-semibold text-slate-700 mb-2">Telangana SSC Curriculum</h3>
+                            <p class="text-slate-600 text-sm">Columbus Model High School follows the Telangana State Board curriculum.</p>
                         </div>
                         <div class="card p-6">
-                            <h3 class="text-xl font-semibold text-slate-700 mb-2">Advanced Placement (AP)</h3>
-                            <p class="text-slate-600 text-sm">We offer a wide array of AP courses, providing students the opportunity to earn college credit and engage in university-level work.</p>
+                            <h3 class="text-xl font-semibold text-slate-700 mb-2">Learning and Assessment</h3>
+                            <p class="text-slate-600 text-sm">Contact the school for current details about subjects, assessment and board examinations.</p>
                         </div>
                         <div class="card p-6">
-                            <h3 class="text-xl font-semibold text-slate-700 mb-2">Specialized Tracks</h3>
-                            <p class="text-slate-600 text-sm">Students can choose to focus on specialized tracks such as STEM, Fine Arts, or Humanities, allowing for deep exploration of their passions.</p>
+                            <h3 class="text-xl font-semibold text-slate-700 mb-2">Student Activities</h3>
+                            <p class="text-slate-600 text-sm">Ask the school which activities are currently available to high-school students.</p>
                         </div>
                     </div>
                 </div>
@@ -81,8 +94,8 @@
                 <!-- Guidance & College Counseling -->
                 <div class="mb-16 bg-slate-100 py-16">
                     <div class="max-w-4xl mx-auto text-center">
-                        <h2 class="text-3xl font-bold tracking-tight text-slate-800 sm:text-4xl mb-6">Expert Guidance & College Counseling</h2>
-                        <p class="text-slate-600 text-lg">Our dedicated college counseling team provides personalized support throughout the application process, from SAT/ACT prep to application workshops and one-on-one advising.</p>
+                        <h2 class="text-3xl font-bold tracking-tight text-slate-800 sm:text-4xl mb-6">Student Guidance</h2>
+                        <p class="text-slate-600 text-lg">For information about academic guidance and student support, please contact the school directly.</p>
                     </div>
                 </div>
 
@@ -90,29 +103,17 @@
                 <div class="mb-16">
                     <h2 class="text-3xl font-bold tracking-tight text-slate-800 sm:text-4xl text-center mb-12">Leadership and Enrichment</h2>
                     <div class="max-w-4xl mx-auto text-center">
-                        <p class="text-slate-600 mb-8">We encourage students to take on leadership roles and participate in enrichment opportunities that build character and real-world skills.</p>
+                        <p class="text-slate-600 mb-8">The school can share current information about Grade 9–10 admissions, fees, documents and activities.</p>
                         <div class="flex flex-wrap justify-center items-center gap-x-6 gap-y-4 text-slate-700">
-                            <span class="font-medium"><i class="fas fa-user-tie mr-2 text-sky-600"></i>Student Leadership Roles</span>
-                            <span class="font-medium"><i class="fas fa-briefcase mr-2 text-sky-600"></i>Internship Programs</span>
-                            <span class="font-medium"><i class="fas fa-flask mr-2 text-sky-600"></i>Advanced Research</span>
-                            <span class="font-medium"><i class="fas fa-globe mr-2 text-sky-600"></i>Global Exchange Programs</span>
+                            <a href="tel:+919000232197" class="inline-flex items-center rounded-lg bg-slate-900 px-6 py-3 font-semibold text-white hover:bg-slate-700">Call admissions · +91 90002 32197</a>
                         </div>
                     </div>
                 </div>
 
-                <!-- Alumni Success -->
-                <div>
-                    <h2 class="text-3xl font-bold tracking-tight text-slate-800 sm:text-4xl text-center mb-12">Our Graduates Succeed</h2>
-                     <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-                        <div class="bg-slate-100 p-6 rounded-lg">
-                            <p class="text-slate-600 italic mb-4">"CMHS prepared me not just for the academic rigor of university, but also gave me the confidence to lead and innovate."</p>
-                            <p class="font-semibold text-slate-800">- Jane Doe, Harvard University</p>
-                        </div>
-                        <div class="bg-slate-100 p-6 rounded-lg">
-                            <p class="text-slate-600 italic mb-4">"The internship program was a game-changer. I started my engineering degree with real-world experience thanks to CMHS."</p>
-                            <p class="font-semibold text-slate-800">- John Smith, Stanford University</p>
-                        </div>
-                    </div>
+                 <!-- Student outcomes -->
+                 <div>
+                     <h2 class="text-3xl font-bold tracking-tight text-slate-800 sm:text-4xl text-center mb-6">SSC results</h2>
+                     <p class="text-slate-600 text-center">For current, school-confirmed Class 10 results, please contact Columbus Model High School directly.</p>
                 </div>
 
             </div>
@@ -120,12 +121,12 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-slate-800 text-white">
+    <footer class="bg-slate-900 text-white">
         <div class="container mx-auto px-6 py-12">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
                 <div>
                     <h3 class="text-lg font-semibold mb-4">Columbus Model High School</h3>
-                    <p class="text-slate-400 text-sm">Fostering excellence, integrity, and lifelong learning.</p>
+                    <p class="text-slate-400 text-sm">A Telangana SSC school in Miyapur for students from pre-primary through Grade 10.</p>
                 </div>
                 <div>
                     <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
@@ -133,6 +134,8 @@
                         <li><a href="index.html#about" class="text-slate-400 hover:text-white">About Us</a></li>
                         <li><a href="index.html#academics" class="text-slate-400 hover:text-white">Academics</a></li>
                         <li><a href="index.html#admissions" class="text-slate-400 hover:text-white">Admissions</a></li>
+                        <li><a href="faculty.html" class="text-slate-400 hover:text-white">Faculty</a></li>
+                        <li><a href="privacy.html" class="text-slate-400 hover:text-white">Privacy policy</a></li>
                     </ul>
                 </div>
                 <div>
@@ -144,17 +147,19 @@
                 <div>
                     <h3 class="text-lg font-semibold mb-4">Follow Us</h3>
                     <div class="flex space-x-4">
-                        <a href="https://www.facebook.com" target="_blank" class="text-slate-400 hover:text-white"><i class="fab fa-facebook-f fa-lg"></i></a>
-                        <a href="https://www.twitter.com" target="_blank" class="text-slate-400 hover:text-white"><i class="fab fa-twitter fa-lg"></i></a>
-                        <a href="https://www.instagram.com/columbusmodelhighschool" target="_blank" class="text-slate-400 hover:text-white"><i class="fab fa-instagram fa-lg"></i></a>
+                        <a href="https://www.instagram.com/columbusmodelhighschool" target="_blank" rel="noopener" class="text-slate-400 hover:text-white"><i class="fab fa-instagram fa-lg"></i><span class="sr-only">Instagram</span></a>
+                        <a href="https://www.youtube.com/@CMHS_Miyapur" target="_blank" rel="noopener" class="text-slate-400 hover:text-white"><i class="fab fa-youtube fa-lg"></i><span class="sr-only">YouTube</span></a>
                     </div>
                 </div>
             </div>
             <div class="mt-12 border-t border-slate-700 pt-6 text-center text-sm text-slate-500">
-                <p>&copy; <script>document.write(new Date().getFullYear())</script> Columbus Model High School. All Rights Reserved.</p>
+                <p>&copy; <script>document.write(new Date().getFullYear())</script> Columbus Model High School. All Rights Reserved. · <a href="index.html#cookieBanner">Cookie settings</a></p>
             </div>
         </div>
     </footer>
+
+    <a class="page-wa-float" href="https://wa.me/919000232197?text=Hi%2C%20I%27m%20interested%20in%20admissions%20at%20Columbus%20Model%20High%20School%2C%20Miyapur." target="_blank" rel="noopener" aria-label="Chat with admissions on WhatsApp">WhatsApp admissions</a>
+    <a class="page-apply-float" href="index.html#admissions">Apply Now</a>
 
     <script>
         // Mobile menu toggle
@@ -162,7 +167,19 @@
         const mobileMenu = document.getElementById('mobile-menu');
 
         mobileMenuButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
+            const isClosed = mobileMenu.classList.toggle('hidden');
+            mobileMenuButton.setAttribute('aria-expanded', String(!isClosed));
+            mobileMenuButton.setAttribute('aria-label', isClosed ? 'Open navigation menu' : 'Close navigation menu');
+            mobileMenu.setAttribute('aria-hidden', String(isClosed));
+        });
+        document.addEventListener('keydown', event => {
+            if (event.key === 'Escape' && !mobileMenu.classList.contains('hidden')) {
+                mobileMenu.classList.add('hidden');
+                mobileMenuButton.setAttribute('aria-expanded', 'false');
+                mobileMenuButton.setAttribute('aria-label', 'Open navigation menu');
+                mobileMenu.setAttribute('aria-hidden', 'true');
+                mobileMenuButton.focus();
+            }
         });
     </script>
 
