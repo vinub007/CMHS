@@ -703,7 +703,16 @@ nav { padding-inline: clamp(20px, 4vw, 64px); }
 }
 .results-callout .section-title { margin-bottom: 8px; }
 .results-callout .section-sub { max-width: 640px; }
-.results-callout .btn-primary { flex: 0 0 auto; }
+.results-actions { display: flex; flex: 0 0 auto; flex-direction: column; align-items: flex-start; gap: 10px; }
+.results-actions .btn-primary { white-space: nowrap; }
+.results-whatsapp {
+  color: var(--gold-light);
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.results-whatsapp:hover { color: var(--white); }
 .school-updates { background: var(--cream); }
 .updates-card {
   display: flex;
@@ -933,7 +942,10 @@ nav { padding-inline: clamp(20px, 4vw, 64px); }
       <h2 class="section-title" id="ssc-results-title">Looking for SSC results?</h2>
       <p class="section-sub">For current, school-confirmed Class 10 result information, please contact Columbus Model High School directly.</p>
     </div>
-    <a class="btn-primary" href="tel:+914045200470">Call the school →</a>
+    <div class="results-actions">
+      <a class="btn-primary" href="tel:+914045200470">Call +91 40 4520 0470</a>
+      <a class="results-whatsapp" href="https://wa.me/919000232197?text=Hello%2C%20I%27m%20enquiring%20about%20SSC%20Class%2010%20results." target="_blank" rel="noopener">Message admissions on WhatsApp</a>
+    </div>
   </div>
 </section>
 
@@ -1356,5 +1368,6 @@ try {
   cookieBanner.classList.add('open');
 }
 </script>
+<script src="image-protection.js" defer></script>
 </body>
 </html>
