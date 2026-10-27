@@ -1,0 +1,227 @@
+:root {
+  --school-navy: #10243a;
+  --school-navy-mid: #1d3853;
+  --school-gold: #c49337;
+  --school-gold-light: #edc46f;
+  --school-cream: #f7f5f0;
+  --school-ink: #192330;
+  --school-muted: #5d6874;
+  --school-radius: 18px;
+}
+
+html {
+  scroll-padding-top: 88px;
+}
+
+body.bg-slate-50 {
+  background: var(--school-cream);
+  color: var(--school-ink);
+  font-family: "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.school-header {
+  border-bottom: 1px solid rgb(237 196 111 / 20%);
+  background: rgb(16 36 58 / 97%);
+  box-shadow: 0 8px 26px rgb(16 36 58 / 12%);
+  backdrop-filter: blur(14px);
+}
+
+.school-header > div:first-child {
+  padding-block: 0.75rem;
+}
+
+.school-brand-logo {
+  width: 3.25rem;
+  height: 3.25rem;
+  border: 2px solid rgb(255 255 255 / 90%);
+  border-radius: 0.85rem;
+  padding: 2px;
+}
+
+.school-brand-name {
+  font-size: 1rem;
+}
+
+.school-header .nav-link {
+  display: inline-flex;
+  min-height: 2.75rem;
+  align-items: center;
+  color: rgb(255 255 255 / 82%);
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.school-nav-cta {
+  min-height: 2.75rem;
+  border-radius: 0.75rem;
+  padding-inline: 1.1rem;
+  box-shadow: 0 6px 16px rgb(196 147 55 / 18%);
+}
+
+.school-menu-toggle {
+  min-width: 2.75rem;
+  min-height: 2.75rem;
+  border: 1px solid rgb(255 255 255 / 20%);
+  border-radius: 0.75rem;
+}
+
+.school-mobile-menu {
+  border-top: 1px solid rgb(255 255 255 / 12%);
+  padding-block: 0.65rem 1rem;
+  box-shadow: 0 14px 28px rgb(16 36 58 / 18%);
+}
+
+.school-mobile-link {
+  min-height: 2.75rem;
+  padding-block: 0.75rem;
+}
+
+#main-content > section:first-child:not(.faculty-hero) {
+  min-height: 400px;
+  padding: 5rem 1.5rem;
+  background-position: center 45%;
+}
+
+#main-content > section:first-child:not(.faculty-hero) > div:first-child:not(.relative) {
+  max-width: 820px;
+}
+
+#main-content > section:first-child:not(.faculty-hero) h1 {
+  font-family: Georgia, "Times New Roman", serif;
+  letter-spacing: -0.035em;
+}
+
+#main-content > section:first-child:not(.faculty-hero) p {
+  margin-inline: auto;
+  color: rgb(255 255 255 / 88%);
+}
+
+#main-content > div.bg-white {
+  background:
+    radial-gradient(ellipse at 92% 8%, rgb(196 147 55 / 5%), transparent 32%),
+    #fff;
+}
+
+#main-content .card {
+  border: 1px solid rgb(16 36 58 / 8%);
+  border-radius: 1.1rem;
+  box-shadow: 0 12px 32px rgb(16 36 58 / 7%);
+}
+
+#main-content .card:hover {
+  box-shadow: 0 20px 42px rgb(16 36 58 / 12%);
+}
+
+#main-content h2 {
+  font-family: Georgia, "Times New Roman", serif;
+  letter-spacing: -0.025em;
+}
+
+#main-content .bg-slate-100 {
+  border-radius: 1.25rem;
+  background: var(--school-cream);
+}
+
+.faculty-hero {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 82% 18%, rgb(237 196 111 / 16%), transparent 24%),
+    linear-gradient(125deg, #10243a, #1d3853);
+}
+
+.faculty-hero::after {
+  position: absolute;
+  right: -5rem;
+  bottom: -11rem;
+  width: 24rem;
+  height: 24rem;
+  border: 1px solid rgb(237 196 111 / 18%);
+  border-radius: 50%;
+  content: "";
+}
+
+.faculty-hero > div {
+  position: relative;
+  z-index: 1;
+}
+
+.faculty-hero h1 {
+  font-family: Georgia, "Times New Roman", serif;
+  letter-spacing: -0.04em;
+}
+
+.faculty-section {
+  min-height: 55vh;
+}
+
+.faculty-card {
+  border: 1px solid rgb(16 36 58 / 8%);
+  border-radius: 1rem;
+  box-shadow: 0 12px 32px rgb(16 36 58 / 7%);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.faculty-card:hover {
+  box-shadow: 0 20px 42px rgb(16 36 58 / 12%);
+  transform: translateY(-4px);
+}
+
+body > footer {
+  background: linear-gradient(135deg, #10243a, #0b1928);
+}
+
+body > footer .container {
+  max-width: 1360px;
+}
+
+.page-wa-float,
+.page-apply-float {
+  border-radius: 0.8rem;
+  font-size: 0.9rem;
+}
+
+a:focus-visible,
+button:focus-visible,
+select:focus-visible {
+  outline-color: var(--school-gold-light);
+}
+
+@media (min-width: 768px) {
+  .school-header > div:first-child > div {
+    gap: 1rem;
+  }
+
+  .school-header > div:first-child > div > div.hidden.md\:flex {
+    gap: clamp(0.65rem, 1.15vw, 1.15rem);
+  }
+}
+
+@media (max-width: 767px) {
+  #main-content > section:first-child:not(.faculty-hero) {
+    min-height: 340px;
+    padding: 4rem 1.25rem;
+  }
+
+  .faculty-hero {
+    padding: 4rem 1.5rem;
+  }
+
+  .faculty-hero h1 {
+    font-size: clamp(2.5rem, 12vw, 4rem);
+  }
+
+  .page-wa-float,
+  .page-apply-float {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}

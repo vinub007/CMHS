@@ -17,10 +17,11 @@
 <meta property="og:url" content="https://columbusmodelhighschool.com">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://columbusmodelhighschool.com/">
+<link rel="stylesheet" href="quick-actions.css">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "School",
+  "@type": ["School", "EducationalOrganization", "LocalBusiness"],
   "name": "Columbus Model High School",
   "alternateName": "CMHS Miyapur",
   "url": "https://columbusmodelhighschool.com/",
@@ -53,6 +54,142 @@
     "https://www.google.com/maps?cid=13599092696481403763",
     "https://www.instagram.com/columbusmodelhighschool",
     "https://www.youtube.com/@CMHS_Miyapur"
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Do you publish fee information online?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Fee details are not published online. Please call the school at +91 90002 32197 or +91 90304 74447."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which documents are required for admission?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Please call the school for the current document list. Do not send identity numbers through this website form."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which grades does the school offer?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The website describes classes from pre-primary through Grade 10. Contact the school to confirm availability for a particular class."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which curriculum does the school follow?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Columbus Model High School follows the Telangana State Board curriculum."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How can I ask about admission availability?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Call the admissions team at +91 90002 32197 or use the enquiry form on the website."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I arrange a campus visit?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Please call the school in advance at +91 90002 32197 to discuss a suitable visit time."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Where is the school located?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Columbus Model High School is at Plot No: 5, Opp. Miyapur Depot, Mayuri Nagar, Miyapur, Hyderabad – 500049, Telangana."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are the school office hours?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The listed school hours are Monday to Saturday, 8:30 AM to 3:30 PM. Call to confirm office availability before visiting."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How can I contact the school?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Call +91 90002 32197, email enquiry@columbusmodelhighschool.com, or use the contact section on the website."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I enquire about primary classes?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The primary-years page covers pre-primary through Grade 5. Contact the school to confirm current availability and details."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I enquire about middle school?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The middle-school page covers Grades 6–8. Contact the school to confirm current availability and details."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I enquire about high school?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The high-school page covers Grades 9–10. Contact the school for current subject, assessment and admission information."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I apply online?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "This website supports an enquiry through WhatsApp; it does not accept a complete online application or document uploads. Contact the school for next steps."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does the website collect or store enquiry form submissions?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. The form opens WhatsApp with a message for you to review and send. This website does not store or email submissions."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How can I find the campus?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Use the Google Maps directions or call the school for help."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How can I ask about school events?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Contact the school directly or check its official social channels for updates. Events will be listed on this website when dates are confirmed."
+      }
+    }
   ]
 }
 </script>
@@ -689,6 +826,24 @@ nav { padding-inline: clamp(20px, 4vw, 64px); }
   color: var(--text-muted);
   font-size: 14px;
 }
+.audience { background: var(--white); }
+.audience-grid, .update-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; margin-top: 32px; }
+.audience-card, .update-card {
+  display: block; padding: 22px; border: 1px solid rgba(13,27,42,0.12);
+  border-radius: var(--radius); background: var(--cream); color: var(--navy);
+  text-decoration: none; transition: border-color 0.2s, transform 0.2s;
+}
+.audience-card:hover, .update-card:hover { border-color: var(--gold); transform: translateY(-2px); }
+.audience-card strong, .update-card strong { display: block; margin-bottom: 6px; font-size: 16px; }
+.audience-card span, .update-card span { display: block; color: var(--text-muted); font-size: 13px; line-height: 1.5; }
+.update-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.update-card { background: var(--white); }
+.update-card a { color: var(--navy); font-weight: 600; }
+.gallery-preview { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(240px, 0.7fr); gap: 28px; align-items: center; margin-top: 32px; }
+.gallery-preview img { display: block; width: 100%; max-height: 440px; border-radius: var(--radius-lg); object-fit: cover; }
+.gallery-preview p { margin: 14px 0 20px; color: var(--text-muted); }
+.utility-links { display: flex; flex-wrap: wrap; gap: 14px; align-items: center; }
+.utility-links a { color: var(--navy); font-size: 13px; font-weight: 600; text-underline-offset: 3px; }
 .ssc-results { padding-block: 64px; }
 .results-callout {
   display: flex;
@@ -772,12 +927,14 @@ nav { padding-inline: clamp(20px, 4vw, 64px); }
   .school-fact:last-child { border-bottom: 0; }
   .results-callout, .updates-card { align-items: flex-start; flex-direction: column; }
   .program-features { min-height: 0; }
+  .audience-grid, .update-grid, .gallery-preview { grid-template-columns: 1fr; }
 }
 @media (prefers-reduced-motion: reduce) {
   .hero-badge::before { animation: none; }
 }
 
 </style>
+<link rel="stylesheet" href="home-modern.css">
 </head>
 <body>
 
@@ -818,10 +975,13 @@ nav { padding-inline: clamp(20px, 4vw, 64px); }
   <ul class="nav-links">
     <li><a href="#about">Our School</a></li>
     <li><a href="#academics">Academics</a></li>
-    <li><a href="#results">SSC</a></li>
-    <li><a href="faculty.html">Faculty</a></li>
     <li><a href="#admissions">Admissions</a></li>
-    <li><a href="#contact">Visit us</a></li>
+    <li><a href="faculty.html">Faculty</a></li>
+    <li><a href="#student-life">Student Life</a></li>
+    <li><a href="#alumni">Alumni</a></li>
+    <li><a href="news-events.html">News &amp; Events</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="search.html">Search</a></li>
   </ul>
   <a class="nav-cta" href="#admissions">Apply Now →</a>
   <button class="nav-toggle" type="button" aria-label="Open navigation menu" aria-controls="mobileNav" aria-expanded="false" onclick="toggleMobileNav()">
@@ -834,10 +994,13 @@ nav { padding-inline: clamp(20px, 4vw, 64px); }
   <button class="mobile-close" type="button" aria-label="Close navigation menu" onclick="toggleMobileNav()">✕</button>
   <a href="#about" onclick="toggleMobileNav()">Our School</a>
   <a href="#academics" onclick="toggleMobileNav()">Academics</a>
-  <a href="#results" onclick="toggleMobileNav()">SSC</a>
-  <a href="faculty.html" onclick="toggleMobileNav()">Faculty</a>
   <a href="#admissions" onclick="toggleMobileNav()">Admissions</a>
-  <a href="#contact" onclick="toggleMobileNav()">Visit us</a>
+  <a href="faculty.html" onclick="toggleMobileNav()">Faculty</a>
+  <a href="#student-life" onclick="toggleMobileNav()">Student Life</a>
+  <a href="#alumni" onclick="toggleMobileNav()">Alumni</a>
+  <a href="news-events.html" onclick="toggleMobileNav()">News &amp; Events</a>
+  <a href="#contact" onclick="toggleMobileNav()">Contact</a>
+  <a href="search.html" onclick="toggleMobileNav()">Search</a>
   <a class="btn-primary" href="#admissions" onclick="toggleMobileNav()">Apply Now</a>
 </div>
 
@@ -869,6 +1032,16 @@ nav { padding-inline: clamp(20px, 4vw, 64px); }
   <div class="school-fact"><div><strong>Miyapur, Hyderabad</strong><span>Opposite Miyapur Depot</span></div></div>
 </div>
 
+<section class="audience" aria-labelledby="audience-title">
+  <div class="section-eyebrow">Welcome to CMHS</div>
+  <h2 class="section-title" id="audience-title">What brings you here?</h2>
+  <div class="audience-grid">
+    <a class="audience-card" href="#admissions"><strong>I'm exploring the school</strong><span>Find admissions information and contact the school.</span></a>
+    <a class="audience-card" href="#contact"><strong>I'm a current parent</strong><span>Reach the school for current notices and family support.</span></a>
+    <a class="audience-card" href="#academics"><strong>I'm a student</strong><span>Explore the learning stages from primary to Grade 10.</span></a>
+    <a class="audience-card" href="#alumni"><strong>I'm an alumnus</strong><span>Reconnect with the school and share your passed-out batch and contact details.</span></a>
+  </div>
+</section>
 
 <!-- ABOUT -->
 <section class="about" id="about">
@@ -961,17 +1134,74 @@ nav { padding-inline: clamp(20px, 4vw, 64px); }
   </div>
 </section>
 
+<section class="alumni" id="alumni" aria-labelledby="alumni-title">
+  <div class="section-eyebrow">CMHS alumni network</div>
+  <h2 class="section-title" id="alumni-title">Stay connected with your school</h2>
+  <p class="section-sub">Tell us how to reach you and which year you passed out. Whether you’re working, studying, or not currently working, you’re welcome to reconnect.</p>
+  <div class="alumni-card">
+    <form id="alumniForm" onsubmit="submitAlumni(event)" novalidate>
+      <div class="form-row">
+        <div class="form-field">
+          <label for="alumniName">Your name *</label>
+          <input id="alumniName" name="name" type="text" placeholder="Your full name" maxlength="100" autocomplete="name" required>
+        </div>
+        <div class="form-field">
+          <label for="alumniPhone">Mobile number *</label>
+          <input id="alumniPhone" name="phone" type="tel" placeholder="+91 90002 32197 or a 10-digit number" inputmode="tel" autocomplete="tel" pattern="(?:\+91\s?)?[6-9][0-9]{4}\s?[0-9]{5}" maxlength="15" required>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-field">
+          <label for="alumniEmail">Email address *</label>
+          <input id="alumniEmail" name="email" type="email" placeholder="you@example.com" maxlength="254" autocomplete="email" required>
+        </div>
+        <div class="form-field">
+          <label for="alumniBatch">Year you passed out (batch) *</label>
+          <input id="alumniBatch" name="batch" type="text" inputmode="numeric" placeholder="e.g. 2010" pattern="[0-9]{4}" maxlength="4" required>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-field">
+          <label for="alumniCurrentStatus">Current status (optional)</label>
+          <select id="alumniCurrentStatus" name="status">
+            <option value="">Prefer not to say</option>
+            <option value="Working">Working</option>
+            <option value="Not currently working">Not currently working</option>
+            <option value="Studying">Studying</option>
+          </select>
+        </div>
+        <div class="form-field">
+          <label for="alumniMentoring">Interested in mentoring students? (optional)</label>
+          <select id="alumniMentoring" name="mentoring">
+            <option value="">No answer</option>
+            <option value="Yes">Yes</option>
+            <option value="Maybe, share more information">Maybe, share more information</option>
+            <option value="Not at this time">Not at this time</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-field honeypot" aria-hidden="true">
+        <label for="alumniWebsite">Leave this field blank</label>
+        <input id="alumniWebsite" name="website" type="text" tabindex="-1" autocomplete="off">
+      </div>
+      <label class="consent-label"><input name="consent" type="checkbox" required> I agree that the school may use these details to contact me about the alumni network. <a href="privacy.html">Privacy policy</a>.</label>
+      <p class="form-sub">This site opens a pre-filled WhatsApp message for you to review. Your details are not stored or emailed by this website; they are sent only if you choose to send the message in WhatsApp.</p>
+      <p class="form-status" id="alumniStatus" role="status" aria-live="polite"></p>
+      <button type="submit" class="form-submit">Continue to WhatsApp →</button>
+    </form>
+  </div>
+</section>
+
 <!-- STUDENT LIFE -->
 <section class="school-updates" id="student-life">
   <div class="section-eyebrow">School updates</div>
-  <h2 class="section-title">See what’s happening<br>at CMHS</h2>
-  <div class="updates-card">
-    <p class="section-sub">For recent school news, events and announcements, visit the school’s official social channels.</p>
-    <div class="updates-links">
-      <a href="https://www.instagram.com/columbusmodelhighschool" target="_blank" rel="noopener">Instagram ↗</a>
-      <a href="https://www.youtube.com/@CMHS_Miyapur" target="_blank" rel="noopener">YouTube ↗</a>
-    </div>
+  <h2 class="section-title">News, events and student life</h2>
+  <p class="section-sub">Dates and announcements will be listed here once confirmed by the school. Follow official channels for current updates.</p>
+  <div class="update-grid">
+    <div class="update-card"><strong>Upcoming events</strong><span>No upcoming events have been published on this website. Contact the school to confirm dates.</span></div>
+    <div class="update-card"><strong>Latest news</strong><span>See the school’s official social channels for current announcements.</span><span class="utility-links"><a href="https://www.instagram.com/columbusmodelhighschool" target="_blank" rel="noopener">Instagram ↗</a><a href="https://www.youtube.com/@CMHS_Miyapur" target="_blank" rel="noopener">YouTube ↗</a></span></div>
   </div>
+  <p class="program-ask"><a href="news-events.html">News and events information →</a></p>
 </section>
 
 <!-- ADMISSIONS -->
@@ -1052,17 +1282,80 @@ nav { padding-inline: clamp(20px, 4vw, 64px); }
       <summary>Which documents are required for admission?</summary>
       <p>Please call the school for the current document list. Do not send identity numbers through this website form.</p>
     </details>
+    <details>
+      <summary>Which grades does the school offer?</summary>
+      <p>The website describes classes from pre-primary through Grade 10. Contact the school to confirm availability for a particular class.</p>
+    </details>
+    <details>
+      <summary>Which curriculum does the school follow?</summary>
+      <p>Columbus Model High School follows the Telangana State Board curriculum.</p>
+    </details>
+    <details>
+      <summary>How can I ask about admission availability?</summary>
+      <p>Call the admissions team at <a href="tel:+919000232197">+91 90002 32197</a> or use the enquiry form above.</p>
+    </details>
+    <details>
+      <summary>How do I arrange a campus visit?</summary>
+      <p>Please call the school in advance at <a href="tel:+919000232197">+91 90002 32197</a> to discuss a suitable visit time.</p>
+    </details>
+    <details>
+      <summary>Where is the school located?</summary>
+      <p>Columbus Model High School is at Plot No: 5, Opp. Miyapur Depot, Mayuri Nagar, Miyapur, Hyderabad – 500049, Telangana.</p>
+    </details>
+    <details>
+      <summary>What are the school office hours?</summary>
+      <p>The listed school hours are Monday to Saturday, 8:30 AM to 3:30 PM. Call to confirm office availability before visiting.</p>
+    </details>
+    <details>
+      <summary>How can I contact the school?</summary>
+      <p>Call <a href="tel:+919000232197">+91 90002 32197</a>, email <a href="mailto:enquiry@columbusmodelhighschool.com">enquiry@columbusmodelhighschool.com</a>, or use the contact section below.</p>
+    </details>
+    <details>
+      <summary>Can I enquire about primary classes?</summary>
+      <p>The primary-years page covers pre-primary through Grade 5. Contact the school to confirm current availability and details.</p>
+    </details>
+    <details>
+      <summary>Can I enquire about middle school?</summary>
+      <p>The middle-school page covers Grades 6–8. Contact the school to confirm current availability and details.</p>
+    </details>
+    <details>
+      <summary>Can I enquire about high school?</summary>
+      <p>The high-school page covers Grades 9–10. Contact the school for current subject, assessment and admission information.</p>
+    </details>
+    <details>
+      <summary>Can I apply online?</summary>
+      <p>This website supports an enquiry through WhatsApp; it does not accept a complete online application or document uploads. Contact the school for next steps.</p>
+    </details>
+    <details>
+      <summary>Does the website collect or store enquiry form submissions?</summary>
+      <p>No. The form opens WhatsApp with a message for you to review and send. This website does not store or email submissions.</p>
+    </details>
+    <details>
+      <summary>How can I find the campus?</summary>
+      <p>Use the <a href="https://www.google.com/maps?cid=13599092696481403763" target="_blank" rel="noopener">Google Maps directions</a> or call the school for help.</p>
+    </details>
+    <details>
+      <summary>How can I ask about school events?</summary>
+      <p>Contact the school directly or check its official social channels for updates. Events will be listed on this website when dates are confirmed.</p>
+    </details>
   </div>
 </section>
 
 <!-- SCHOOL UPDATES -->
 <section class="social" id="gallery">
-  <div class="section-eyebrow">Stay connected</div>
-  <h2 class="section-title">School news and updates</h2>
-  <p class="section-sub">Follow the school’s official channels for announcements and recent updates.</p>
-  <div class="updates-links">
-    <a href="https://www.instagram.com/columbusmodelhighschool" target="_blank" rel="noopener">Instagram ↗</a>
-    <a href="https://www.youtube.com/@CMHS_Miyapur" target="_blank" rel="noopener">YouTube ↗</a>
+  <div class="section-eyebrow">Our campus</div>
+  <h2 class="section-title">A glimpse of Columbus Model High School</h2>
+  <div class="gallery-preview">
+    <a href="Images/Campus.avif" target="_blank" rel="noopener" aria-label="Open campus photograph">
+      <img src="Images/Campus.avif" alt="Campus of Columbus Model High School in Miyapur, Hyderabad" loading="lazy" width="1400" height="1000">
+    </a>
+    <div>
+      <p>We are preparing a school-approved gallery. Only images cleared for publication will be added.</p>
+      <div class="utility-links">
+        <a href="https://www.instagram.com/columbusmodelhighschool" target="_blank" rel="noopener">Official Instagram ↗</a>
+        <a href="https://www.youtube.com/@CMHS_Miyapur" target="_blank" rel="noopener">Official YouTube ↗</a>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -1151,8 +1444,11 @@ nav { padding-inline: clamp(20px, 4vw, 64px); }
         <li><a href="#academics">Academics</a></li>
         <li><a href="#admissions">Admissions</a></li>
         <li><a href="#student-life">Student life</a></li>
+        <li><a href="#alumni">Alumni</a></li>
         <li><a href="#results">SSC Results</a></li>
         <li><a href="faculty.html">Faculty</a></li>
+        <li><a href="news-events.html">News &amp; Events</a></li>
+        <li><a href="search.html">Search</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </div>
@@ -1162,6 +1458,7 @@ nav { padding-inline: clamp(20px, 4vw, 64px); }
         <li><a href="primary-years.html">Primary years</a></li>
         <li><a href="middle-school.html">Middle school</a></li>
         <li><a href="high-school.html">High school</a></li>
+        <li><a href="#alumni">Alumni network</a></li>
         <li><a href="#gallery">School updates</a></li>
       </ul>
     </div>
@@ -1175,6 +1472,7 @@ nav { padding-inline: clamp(20px, 4vw, 64px); }
         <li><a href="https://www.instagram.com/columbusmodelhighschool" target="_blank" rel="noopener">Instagram</a></li>
         <li><a href="https://www.youtube.com/@CMHS_Miyapur" target="_blank" rel="noopener">YouTube</a></li>
         <li><a href="privacy.html">Privacy policy</a></li>
+        <li><a href="accessibility.html">Accessibility</a></li>
       </ul>
     </div>
   </div>
@@ -1251,7 +1549,7 @@ function openWhatsApp(form, statusId, message) {
       : firstInvalid.name === 'phone'
         ? 'Enter a valid 10-digit Indian mobile number, with or without the +91 prefix.'
         : firstInvalid.name === 'email'
-          ? 'Enter a valid email address or leave the email field blank.'
+          ? (firstInvalid.required ? 'Enter a valid email address.' : 'Enter a valid email address or leave the email field blank.')
           : 'Please complete the required fields highlighted above.';
     firstInvalid.focus();
     firstInvalid.reportValidity();
@@ -1312,14 +1610,34 @@ function submitContact(event) {
   );
 }
 
-document.querySelectorAll('#admForm, #contactForm').forEach(function(form) {
+function submitAlumni(event) {
+  event.preventDefault();
+  var form = event.currentTarget;
+  var data = new FormData(form);
+  openWhatsApp(
+    form,
+    'alumniStatus',
+    'CMHS alumni network registration:\nName: ' + data.get('name')
+      + '\nEmail: ' + data.get('email')
+      + '\nPassed-out batch: ' + data.get('batch')
+      + '\nCurrent status: ' + (data.get('status') || 'Prefer not to say')
+      + '\nInterested in mentoring: ' + (data.get('mentoring') || 'No answer')
+  );
+}
+
+document.querySelectorAll('#admForm, #contactForm, #alumniForm').forEach(function(form) {
+  var statusId = form.id === 'admForm'
+    ? 'admissionStatus'
+    : form.id === 'contactForm'
+      ? 'contactStatus'
+      : 'alumniStatus';
   form.addEventListener('input', function(event) {
     var field = event.target;
     if (field.willValidate && field.checkValidity()) {
       field.removeAttribute('aria-invalid');
     }
     if (form.checkValidity()) {
-      document.getElementById(form.id === 'admForm' ? 'admissionStatus' : 'contactStatus').textContent = '';
+      document.getElementById(statusId).textContent = '';
     }
   });
   form.addEventListener('change', function(event) {
@@ -1328,7 +1646,7 @@ document.querySelectorAll('#admForm, #contactForm').forEach(function(form) {
       field.removeAttribute('aria-invalid');
     }
     if (form.checkValidity()) {
-      document.getElementById(form.id === 'admForm' ? 'admissionStatus' : 'contactStatus').textContent = '';
+      document.getElementById(statusId).textContent = '';
     }
   });
 });
@@ -1369,5 +1687,6 @@ try {
 }
 </script>
 <script src="image-protection.js" defer></script>
+<script src="quick-actions.js" defer></script>
 </body>
 </html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Search | Columbus Model High School</title>
+  <meta name="description" content="Search public information on the Columbus Model High School website.">
+  <meta property="og:title" content="Search | Columbus Model High School">
+  <meta property="og:description" content="Search public information on the Columbus Model High School website.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://columbusmodelhighschool.com/search.html">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Search | Columbus Model High School">
+  <meta name="twitter:description" content="Search public information on the Columbus Model High School website.">
+  <link rel="canonical" href="https://columbusmodelhighschool.com/search.html">
+  <link rel="stylesheet" href="quick-actions.css">
+  <link rel="icon" href="Images/logo.png" type="image/png">
+  <style>
+    :root { font-family: system-ui, sans-serif; color: #1a1a1a; background: #faf7f2; }
+    * { box-sizing: border-box; }
+    body { margin: 0; line-height: 1.6; }
+    header, footer { padding: 18px max(6vw, calc((100vw - 1000px) / 2)); background: #0d1b2a; color: #fff; }
+    header { display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap; }
+    header a, footer a { color: #f3cb73; }
+    main { max-width: 1000px; min-height: 65vh; margin: 0 auto; padding: 48px 6vw; background: #fff; }
+    h1, h2 { color: #0d1b2a; line-height: 1.2; }
+    form { display: flex; gap: 10px; margin: 24px 0; }
+    input { flex: 1; min-width: 0; min-height: 48px; padding: 10px 12px; border: 1px solid #64748b; border-radius: 6px; font: inherit; }
+    button { min-height: 48px; padding: 10px 20px; border: 0; border-radius: 6px; background: #0d1b2a; color: #fff; font: inherit; cursor: pointer; }
+    button:focus-visible, a:focus-visible, input:focus-visible { outline: 3px solid #9a6a12; outline-offset: 3px; }
+    #search-status { min-height: 1.6em; color: #475569; }
+    #search-results { padding: 0; list-style: none; }
+    #search-results li { padding: 18px 0; border-bottom: 1px solid #e2e8f0; }
+    #search-results a { color: #0d1b2a; font-weight: 700; }
+    .skip-link { position: absolute; top: 8px; left: 8px; transform: translateY(-150%); padding: 8px 12px; background: #fff; color: #0d1b2a; }
+    .skip-link:focus { transform: translateY(0); }
+    @media (max-width: 520px) { form { flex-direction: column; } }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header>
+    <a href="index.html">Columbus Model High School · Miyapur</a>
+    <nav aria-label="Main navigation">
+      <a href="index.html#academics">Academics</a>
+      <a href="index.html#admissions">Admissions</a>
+      <a href="faculty.html">Faculty</a>
+      <a href="news-events.html">News &amp; events</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+  </header>
+  <main id="main-content">
+    <h1>Search the website</h1>
+    <p>Search public pages and published faculty profiles. News and event listings appear when the school publishes them.</p>
+    <form id="site-search-form" role="search">
+      <label for="site-search-query">Search term</label>
+      <input id="site-search-query" name="q" type="search" autocomplete="off" required>
+      <button type="submit">Search</button>
+    </form>
+    <p id="search-status" role="status" aria-live="polite"></p>
+    <ul id="search-results"></ul>
+  </main>
+  <footer>
+    <a href="privacy.html">Privacy policy</a> ·
+    <a href="accessibility.html">Accessibility</a> ·
+    <a href="index.html">Home</a>
+  </footer>
+  <script src="site-search.js" defer></script>
+  <script src="quick-actions.js" defer></script>
+</body>
+</html>

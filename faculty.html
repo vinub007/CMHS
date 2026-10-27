@@ -17,6 +17,8 @@
   <meta name="twitter:image" content="https://columbusmodelhighschool.com/Images/Campus.avif">
   <link rel="icon" href="Images/logo.png" type="image/png">
   <link rel="stylesheet" href="dist/styles.css">
+  <link rel="stylesheet" href="quick-actions.css">
+  <link rel="stylesheet" href="school-modern.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
   <style>
     .faculty-hero { background: #0d1b2a; color: #fff; }
@@ -32,9 +34,12 @@
     .faculty-role { margin: 0 0 4px; font-weight: 600; }
     .faculty-subject { margin: 0; color: #475569; }
     .faculty-status { padding: 20px; border-radius: 8px; background: #f1f5f9; }
+    .faculty-filter { min-height: 44px; margin-top: 20px; padding: 8px 12px; border: 1px solid #64748b; border-radius: 6px; background: #fff; color: #0f172a; font: inherit; }
+    .faculty-filter:focus-visible { outline: 3px solid #0369a1; outline-offset: 3px; }
     .faculty-content-note { margin-top: 28px; color: #475569; font-size: 14px; }
     .faculty-content-note code { overflow-wrap: anywhere; }
     .faculty-example { max-width: 760px; overflow-x: auto; padding: 16px; border-radius: 8px; background: #0f172a; color: #f8fafc; font-size: 13px; }
+    footer nav { display: flex; flex-wrap: wrap; gap: 0.75rem 1.5rem; }
   </style>
 </head>
 <body class="bg-slate-50 font-sans antialiased">
@@ -52,6 +57,9 @@
           <a href="index.html#results" class="nav-link">SSC</a>
           <a href="faculty.html" class="nav-link" aria-current="page">Faculty</a>
           <a href="index.html#admissions" class="nav-link">Admissions</a>
+          <a href="news-events.html" class="nav-link">News &amp; Events</a>
+          <a href="index.html#alumni" class="nav-link">Alumni</a>
+          <a href="search.html" class="nav-link">Search</a>
           <a href="index.html#admissions" class="school-nav-cta">Apply Now →</a>
         </nav>
         <div class="md:hidden">
@@ -67,6 +75,9 @@
       <a href="index.html#results" class="school-mobile-link">SSC</a>
       <a href="faculty.html" class="school-mobile-link" aria-current="page">Faculty</a>
       <a href="index.html#admissions" class="school-mobile-link">Admissions</a>
+      <a href="news-events.html" class="school-mobile-link">News &amp; Events</a>
+      <a href="index.html#alumni" class="school-mobile-link">Alumni</a>
+      <a href="search.html" class="school-mobile-link">Search</a>
       <a href="index.html#contact" class="school-mobile-link">Visit us</a>
     </nav>
   </header>
@@ -83,6 +94,10 @@
     <section class="faculty-section container mx-auto px-6 py-12 md:py-16" aria-labelledby="faculty-list-title">
       <h2 id="faculty-list-title" class="text-3xl font-bold tracking-tight text-slate-800 sm:text-4xl">Teachers and staff</h2>
       <p id="faculty-status" class="faculty-status mt-6" role="status" aria-live="polite">Faculty profiles are being prepared. For current faculty information, please contact the school.</p>
+      <label for="faculty-department-filter" class="sr-only">Filter faculty by department</label>
+      <select id="faculty-department-filter" class="faculty-filter" aria-controls="faculty-grid" disabled>
+        <option value="">All departments</option>
+      </select>
       <div id="faculty-grid" class="faculty-grid"></div>
       <p class="mt-6"><a class="font-semibold text-sky-800 underline" href="tel:+919000232197">Contact the school for faculty information · +91 90002 32197</a></p>
     </section>
@@ -94,6 +109,10 @@
         <a class="text-slate-200 underline" href="index.html">Home</a>
         <a class="text-slate-200 underline" href="index.html#academics">Academics</a>
         <a class="text-slate-200 underline" href="index.html#admissions">Admissions</a>
+        <a class="text-slate-200 underline" href="news-events.html">News &amp; events</a>
+        <a class="text-slate-200 underline" href="index.html#alumni">Alumni</a>
+        <a class="text-slate-200 underline" href="search.html">Search</a>
+        <a class="text-slate-200 underline" href="accessibility.html">Accessibility</a>
         <a class="text-slate-200 underline" href="privacy.html">Privacy policy</a>
         <a class="text-slate-200 underline" href="index.html#cookieBanner">Cookie settings</a>
       </nav>
@@ -107,11 +126,13 @@
   <a class="page-apply-float" href="index.html#admissions">Apply Now</a>
 
   <script src="image-protection.js" defer></script>
+  <script src="quick-actions.js" defer></script>
   <script>
     const mobileMenuButton = document.getElementById('mobile-menu-button');
     const mobileMenu = document.getElementById('mobile-menu');
     const facultyGrid = document.getElementById('faculty-grid');
     const facultyStatus = document.getElementById('faculty-status');
+    const departmentFilter = document.getElementById('faculty-department-filter');
 
     mobileMenuButton.addEventListener('click', () => {
       const isClosed = mobileMenu.classList.toggle('hidden');
@@ -129,13 +150,16 @@
       }
     });
 
-    function addFacultyCard(member) {
-      if (!member || member.publish !== true || !member.name || !member.role || !member.subject) {
+    function addFacultyCard(member, index) {
+      if (!member || member.publish !== true || !member.name || !member.role
+        || !member.subject || !member.qualification || !member.bio || !member.department) {
         return false;
       }
 
       const card = document.createElement('article');
       card.className = 'faculty-card';
+      card.id = 'faculty-profile-' + index;
+      card.dataset.department = String(member.department).trim();
       const name = String(member.name).trim();
       if (member.photoConsent === true && typeof member.photo === 'string'
         && /^Images\/faculty\/[A-Za-z0-9._-]+\.(?:avif|webp|png|jpe?g)$/i.test(member.photo)) {
@@ -172,11 +196,24 @@
       const subject = document.createElement('p');
       subject.className = 'faculty-subject';
       subject.textContent = String(member.subject).trim();
-      body.append(heading, role, subject);
+      const qualification = document.createElement('p');
+      qualification.className = 'faculty-subject';
+      qualification.textContent = String(member.qualification).trim();
+      const bio = document.createElement('p');
+      bio.className = 'faculty-subject mt-3';
+      bio.textContent = String(member.bio).trim();
+      body.append(heading, role, subject, qualification, bio);
       card.appendChild(body);
       facultyGrid.appendChild(card);
       return true;
     }
+
+    departmentFilter.addEventListener('change', () => {
+      const department = departmentFilter.value;
+      facultyGrid.querySelectorAll('.faculty-card').forEach(card => {
+        card.hidden = Boolean(department && card.dataset.department !== department);
+      });
+    });
 
     fetch('faculty.json')
       .then(response => {
@@ -189,7 +226,18 @@
         if (!content || !Array.isArray(content.staff)) {
           throw new Error('Faculty content must contain a staff array.');
         }
-        const publishedCount = content.staff.reduce((count, member) => count + Number(addFacultyCard(member)), 0);
+        const publishedStaff = content.staff.filter(member => member && member.publish === true);
+        const publishedCount = publishedStaff.reduce((count, member) => count + Number(addFacultyCard(member, content.staff.indexOf(member))), 0);
+        const departments = Array.from(new Set(
+          Array.from(facultyGrid.querySelectorAll('.faculty-card'), card => card.dataset.department)
+        )).sort((a, b) => a.localeCompare(b));
+        departments.forEach(department => {
+          const option = document.createElement('option');
+          option.value = department;
+          option.textContent = department;
+          departmentFilter.appendChild(option);
+        });
+        departmentFilter.disabled = departments.length === 0;
         facultyStatus.textContent = publishedCount
           ? 'Showing ' + publishedCount + ' school-approved faculty profile' + (publishedCount === 1 ? '.' : 's.')
           : 'Faculty profiles are being prepared. For current faculty information, please contact the school at +91 90002 32197.';
