@@ -14,6 +14,7 @@
   <meta name="twitter:description" content="Find current news and event information from Columbus Model High School in Miyapur, Hyderabad.">
   <link rel="canonical" href="https://columbusmodelhighschool.com/news-events.html">
   <link rel="stylesheet" href="quick-actions.css">
+  <link rel="stylesheet" href="video-previews.css">
   <link rel="icon" href="Images/logo.png" type="image/png">
   <style>
     :root { font-family: system-ui, sans-serif; color: #1a1a1a; background: #faf7f2; }
@@ -27,6 +28,8 @@
     .notice { margin: 24px 0; padding: 20px; border-left: 4px solid #c8973a; background: #faf7f2; }
     .actions { display: flex; flex-wrap: wrap; gap: 18px; }
     .actions a { color: #0d1b2a; font-weight: 700; }
+    .video-section { margin: 32px 0; }
+    .video-section h2 { margin-bottom: 10px; }
     a:focus-visible { outline: 3px solid #9a6a12; outline-offset: 3px; }
     .skip-link { position: absolute; top: 8px; left: 8px; transform: translateY(-150%); padding: 8px 12px; background: #fff; color: #0d1b2a; }
     .skip-link:focus { transform: translateY(0); }
@@ -55,6 +58,34 @@
       <h2 id="news-title">School news</h2>
       <p>School-confirmed news will appear here when it is available. Follow official channels for current announcements.</p>
     </section>
+    <section class="video-section" aria-labelledby="school-videos-title">
+      <h2 id="school-videos-title">Videos from school life</h2>
+      <p>Watch activities and moments shared on the school’s official YouTube channel.</p>
+      <div class="video-gallery">
+        <article class="video-card">
+          <a class="video-preview-link" href="https://www.youtube.com/watch?v=SAP9pRnCpXU" data-youtube-video="SAP9pRnCpXU" data-video-title="School life, 6 October 2026" aria-label="Watch school life from 6 October 2026 on YouTube" target="_blank" rel="noopener">
+            <img src="https://i.ytimg.com/vi/SAP9pRnCpXU/hqdefault.jpg" alt="" loading="lazy" decoding="async" width="480" height="360">
+            <span class="video-play-icon" aria-hidden="true"></span>
+          </a>
+          <h3>School life · 6 October 2026</h3>
+        </article>
+        <article class="video-card">
+          <a class="video-preview-link" href="https://www.youtube.com/watch?v=858dXgthUkQ" data-youtube-video="858dXgthUkQ" data-video-title="Grade 5 student activity" aria-label="Watch a Grade 5 student activity on YouTube" target="_blank" rel="noopener">
+            <img src="https://i.ytimg.com/vi/858dXgthUkQ/hqdefault.jpg" alt="" loading="lazy" decoding="async" width="480" height="360">
+            <span class="video-play-icon" aria-hidden="true"></span>
+          </a>
+          <h3>Student activity · Grade 5</h3>
+        </article>
+        <article class="video-card">
+          <a class="video-preview-link" href="https://www.youtube.com/watch?v=w9OyI74QrtA" data-youtube-video="w9OyI74QrtA" data-video-title="Classroom activity by Grade 5 students" aria-label="Watch a classroom activity by Grade 5 students on YouTube" target="_blank" rel="noopener">
+            <img src="https://i.ytimg.com/vi/w9OyI74QrtA/hqdefault.jpg" alt="" loading="lazy" decoding="async" width="480" height="360">
+            <span class="video-play-icon" aria-hidden="true"></span>
+          </a>
+          <h3>Classroom activity · Grade 5</h3>
+        </article>
+      </div>
+      <p class="video-note">Previews load as you scroll. Select a preview to load the YouTube player.</p>
+    </section>
     <div class="actions">
       <a href="tel:+919000232197">Call the school · +91 90002 32197</a>
       <a href="https://www.instagram.com/columbusmodelhighschool" target="_blank" rel="noopener">Official Instagram ↗</a>
@@ -66,6 +97,7 @@
     <a href="accessibility.html">Accessibility</a> ·
     <a href="index.html">Home</a>
   </footer>
+  <script src="video-previews.js" defer></script>
   <script src="quick-actions.js" defer></script>
 </body>
 </html>
