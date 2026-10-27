@@ -366,6 +366,27 @@ section {
   gap: clamp(32px, 5vw, 76px);
 }
 
+.admissions-grid {
+  margin-top: 0;
+}
+
+.admissions .steps-list {
+  min-width: 0;
+}
+
+.admissions .steps-list > .section-title {
+  margin-bottom: 16px;
+}
+
+.admissions .steps-list > .section-sub {
+  margin-bottom: 24px;
+}
+
+.admission-form-card {
+  align-self: start;
+  padding-top: 32px;
+}
+
 .alumni {
   background:
     radial-gradient(ellipse at 90% 8%, rgb(196 147 55 / 8%), transparent 34%),

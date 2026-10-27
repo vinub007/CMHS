@@ -10,6 +10,7 @@
     ['Our School', 'index.html#about'],
     ['Academics', 'index.html#academics'],
     ['Admissions', 'index.html#admissions'],
+    ['FAQs', 'faq.html'],
     ['Faculty', 'faculty.html'],
     ['Student Life', 'index.html#student-life'],
     ['Alumni', 'index.html#alumni'],

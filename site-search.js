@@ -6,6 +6,7 @@
     'primary-years.html',
     'middle-school.html',
     'high-school.html',
+    'faq.html',
     'faculty.html',
     'news-events.html',
     'privacy.html',
