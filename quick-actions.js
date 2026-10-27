@@ -8,6 +8,7 @@
   var items = [
     ['Home', 'index.html'],
     ['Our School', 'index.html#about'],
+    ['Vision & Mission', 'vision-mission.html'],
     ['Academics', 'index.html#academics'],
     ['Admissions', 'index.html#admissions'],
     ['FAQs', 'faq.html'],

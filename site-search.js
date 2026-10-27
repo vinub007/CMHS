@@ -3,6 +3,7 @@
 
   var pages = [
     'index.html',
+    'vision-mission.html',
     'primary-years.html',
     'middle-school.html',
     'high-school.html',
