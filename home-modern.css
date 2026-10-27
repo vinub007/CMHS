@@ -238,9 +238,46 @@ section {
   gap: clamp(36px, 6vw, 88px);
 }
 
+.about#about .about-grid {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.about#about .about-content {
+  max-width: 1080px;
+}
+
 .about-img-main {
   border-radius: 24px;
   box-shadow: 0 24px 60px rgb(16 36 58 / 14%);
+}
+
+.faculty-feature {
+  display: grid;
+  max-width: 1120px;
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+  align-items: center;
+  gap: clamp(32px, 6vw, 76px);
+}
+
+.faculty-photo-figure {
+  min-width: 0;
+  margin: 0;
+}
+
+.faculty-photo {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid rgb(16 36 58 / 8%);
+  border-radius: 20px;
+  box-shadow: 0 20px 52px rgb(16 36 58 / 12%);
+  object-fit: contain;
+}
+
+.faculty-photo-figure figcaption {
+  margin-top: 10px;
+  color: var(--text-muted);
+  font-size: 13px;
 }
 
 .about-detail {
@@ -522,6 +559,10 @@ footer {
   .programs-grid {
     grid-template-columns: 1fr;
     max-width: 680px;
+  }
+
+  .faculty-feature {
+    grid-template-columns: minmax(0, 1fr);
   }
 
   .program-visual {
